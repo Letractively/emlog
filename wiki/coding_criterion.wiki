@@ -101,5 +101,3 @@ switch (condition) {
 　　　　statements;
 　　　　break;
 }
-
-
