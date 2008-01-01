@@ -25,10 +25,10 @@ set - 含义为设定一个数值
 例如（特别注意函数注释）：
 
 /*
-	函数说明
-	@param string $varname 参数说明
-	@param string $varname 参数说明
-	@return string  返回值说明
+ 函数说明
+ @param string $varname 参数说明
+ @param string $varname 参数说明
+ @return string  返回值说明
 */
 function isHitRetryLimit()
 {
@@ -90,7 +90,7 @@ switch语句
 switch (condition) {
 　　case ABC:
 　　　　statements;
-	break;
+ break;
 　　case DEF:
 　　　statements;
 　　　break;
