@@ -30,7 +30,7 @@ set - 含义为设定一个数值
 	@param string $varname 参数说明
 	@return string  返回值说明
 */
-function isHitRetryLimit()/*换行后写大括号*/
+function isHitRetryLimit()
 {
    ..........
 }
@@ -40,11 +40,11 @@ function isHitRetryLimit()/*换行后写大括号*/
 if-else语句应该具有如下格式：
 
 
-if (condition) {/*进行操作的条件*/
+if (condition) {
+    statements;
+} else if (condition) {
 　　statements;
-} else if (condition) {/*进行操作的条件 */
-　　statements;
-} else{/*进行操作的条件*/
+} else{
 　　statements;
 }
 
@@ -100,8 +100,6 @@ switch (condition) {
 　　　　statements;
 　　　　break;
 }
-
-
 
 
 
