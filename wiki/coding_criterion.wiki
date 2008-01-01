@@ -2,8 +2,8 @@ emlog 代码规范
 
 代码缩进使用tab键 避免使用空格
 
-==========================================================================================
-函数
+
+==函数==
 
 方法名是一个动词，采用大小写混合的方式，第一个单词的首字母小写，其后单词的首字母大写。
 function run();
@@ -39,7 +39,8 @@ function isHitRetryLimit()
 
 
 
-if-else语句应该具有如下格式：
+==if-else语句==
+应该具有如下格式：
 
 {{{
 if (condition)
@@ -61,7 +62,8 @@ if (condition)
 }}}
 
 
-while语句,一个while语句应该具有如下格式
+==while语句==
+一个while语句应该具有如下格式
 {{{
 while (condition) 
 {
@@ -71,7 +73,8 @@ while (condition)
 }}}
 
 
-for  foreach 语句,一个for语句应该具有如下格式：
+==for  foreach 语句==
+一个for语句应该具有如下格式：
 
 {{{
 for (initialization; condition; update)
@@ -85,7 +88,7 @@ foreach()
 }
 }}}
 
-switch语句
+==switch语句==
 
 {{{
 switch (condition) {
