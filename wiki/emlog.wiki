@@ -1,4 +1,4 @@
-emlog 代码规范
+代码规范
 
 代码缩进使用tab键 避免使用空格
 
@@ -86,7 +86,8 @@ foreach()
 ==========================================================================================
 switch语句
 
-switch (condition) {
+switch (condition) 
+{
 　　case ABC: 
 　　　　statements;
 	break;
@@ -100,8 +101,6 @@ switch (condition) {
 　　　　statements;
 　　　　break;
 }
-
-
 
 
 
