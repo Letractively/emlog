@@ -40,9 +40,10 @@ function isHitRetryLimit()
 if-else语句应该具有如下格式：
 
 
-if (condition) {
+if (condition)
+{
     statements;
-} else if (condition) {
+} else if (condition){
 　　statements;
 } else{
 　　statements;
@@ -87,7 +88,7 @@ foreach()
 switch语句
 
 switch (condition) {
-　　case ABC: 
+　　case ABC:
 　　　　statements;
 	break;
 　　case DEF:
@@ -100,7 +101,5 @@ switch (condition) {
 　　　　statements;
 　　　　break;
 }
-
-
 
 
