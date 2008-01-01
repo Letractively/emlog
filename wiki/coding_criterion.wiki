@@ -5,7 +5,7 @@ emlog 代码规范
 
 ==函数==
 
-方法名是一个动词，采用大小写混合的方式，第一个单词的首字母小写，其后单词的首字母大写。
+函数名是一个动词，采用大小写混合的方式，第一个单词的首字母小写，其后单词的首字母大写。
 function run();
 function runFast();
 function getBackground();
@@ -31,7 +31,7 @@ set - 含义为设定一个数值
  @param string $varname 参数说明
  @return string  返回值说明
 */
-function isHitRetryLimit()
+function isHitRetryLimit($var,$var2)
 {
    ..........
 }
