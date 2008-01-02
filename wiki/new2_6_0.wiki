@@ -2,12 +2,12 @@
 
 = Introduction =
 
-Add your content here.
+emlog2.6.0更新记录
 
 
 = Details =
 
-Add your content here.  Format your content with:
+更新记录如下:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
