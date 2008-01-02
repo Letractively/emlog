@@ -1,4 +1,4 @@
-#summary emlog2.6.0更新记录
+#summary emlog2.6.0更新记录(增加中……)
 
 
 更新记录如下:
