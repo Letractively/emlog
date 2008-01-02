@@ -1,5 +1,4 @@
 #summary emlog 模板介绍
-emlog 模板介绍
 
 emlog分离了代码和美工部分，所以即使不了解php的用户也可以 
 
