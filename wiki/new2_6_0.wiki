@@ -1,11 +1,5 @@
 #summary emlog2.6.0更新记录
 
-= Introduction =
-
-emlog2.6.0更新记录
-
-
-= Details =
 
 更新记录如下:
   * 
