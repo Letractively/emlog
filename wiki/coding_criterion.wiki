@@ -1,4 +1,4 @@
-emlog 代码规范
+＃summary emlog 代码规范
 
 
 为了让emlog的代码清晰可读，希望所有加入emlog开发的程序员严格按照如下规则为emlog添砖加瓦：）
