@@ -1,5 +1,5 @@
 #summary 数据字典
-
+{{{
 em_attachment
 字段 类型 Null 默认 注释 
 aid   smallint(5)  是  NULL    
@@ -94,4 +94,4 @@ photo   varchar(255) 是
 email   varchar(60) 是      
 description   varchar(255) 是      
 
-
+}}}
