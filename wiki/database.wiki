@@ -1,6 +1,6 @@
 #summary 数据字典
 
-emlog当前最新版本即emlog2.5.0数据库结构
+emlog当前最新版本即emlog2.5.0数据库结构  有时间请在每个字段后 加注释
 
 
 =em_attachment=
