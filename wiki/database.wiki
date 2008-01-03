@@ -1,5 +1,8 @@
 #summary 数据字典
 
+emlog当前最新版本即emlog2.5.0数据库结构
+
+
 =em_attachment=
 {{{
 字段 类型 Null 默认 注释 
