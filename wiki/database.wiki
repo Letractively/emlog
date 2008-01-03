@@ -1,6 +1,7 @@
 #summary 数据字典
+
+=em_attachment=
 {{{
-em_attachment
 字段 类型 Null 默认 注释 
 aid   smallint(5)  是  NULL    
 blogid   mediumint(8)  是  0    
@@ -10,7 +11,10 @@ filesize   int(10) 是  0
 filepath   varchar(255) 是      
 addtime   varchar(10) 是      
 
-em_blog
+}}}
+
+=em_blog=
+{{{
 字段 类型 Null 默认 注释 
 gid   mediumint(8)  是  NULL    
 title   varchar(255) 是      
@@ -25,7 +29,9 @@ allow_remark   enum('n', 'y') 是  y
 allow_tb   enum('n', 'y') 是  y    
 attcache   text 是      
 
-em_comment
+}}}
+=em_comment=
+{{{
 字段 类型 Null 默认 注释 
 cid   mediumint(8)  是  NULL    
 gid   mediumint(8)  是  0    
@@ -34,8 +40,9 @@ poster   varchar(20) 是
 comment   text 是      
 mail   varchar(60) 是      
 hide   enum('n', 'y') 是  n    
-
-em_config
+}}}
+=em_config=
+{{{
 字段 类型 Null 默认 注释 
 site_key   varchar(255) 是      
 blogname   varchar(255) 是      
@@ -53,28 +60,35 @@ nonce_templet   varchar(255) 是
 timezone   float 是  8    
 exarea   text 是      
 
-em_link
+}}}
+=em_link=
+{{{
 字段 类型 Null 默认 注释 
 id   smallint(4)  是  NULL    
 sitename   varchar(30) 是      
 siteurl   varchar(75) 是      
 description   varchar(255) 是      
 taxis   smallint(4)  是  0    
+}}}
 
-em_statistics
+=em_statistics=
+{{{
 字段 类型 Null 默认 注释 
 day_view_count   int(11)  是  0    
 view_count   int(11)  是  0    
 curdate   varchar(20) 是  NULL    
-
-em_tag
+}}}
+=em_tag=
+{{{
 字段 类型 Null 默认 注释 
 tid   mediumint(8)  是  NULL    
 tagname   varchar(60) 是      
 usenum   mediumint(8)  是  1    
 gid   text 是      
 
-em_trackback
+}}}
+=em_trackback=
+{{{
 字段 类型 Null 默认 注释 
 tbid   mediumint(8)  是  NULL    
 gid   mediumint(8)  是  0    
@@ -84,7 +98,9 @@ excerpt   text 是
 url   varchar(255) 是      
 blog_name   varchar(255) 是      
 
-em_user
+}}}
+=em_user=
+{{{
 字段 类型 Null 默认 注释 
 uid   tinyint(3)  是  NULL    
 username   varchar(32) 是      
