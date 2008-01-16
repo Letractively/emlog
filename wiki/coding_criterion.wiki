@@ -97,13 +97,14 @@ foreach()
 ==switch语句==
 
 {{{
-switch (condition) {
+switch (condition) 
+{
 　　case ABC:
 　　　　statements;
- break;
+       break;
 　　case DEF:
-　　　statements;
-　　　break;
+　　　  statements;
+　　　  break;
 　　case XYZ:
 　　　　statements;
 　　　　break;
