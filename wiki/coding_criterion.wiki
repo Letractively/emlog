@@ -48,9 +48,13 @@ function isHitRetryLimit($var,$var2)
 if (condition)
 {
     statements;
-} else if (condition){
+} 
+elseif (condition)
+{
 　　statements;
-} else{
+} 
+else
+{
 　　statements;
 }
 }}}
