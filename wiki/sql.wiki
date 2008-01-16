@@ -3,3 +3,6 @@
 = 内容 =
 
 ==请将数据库变更用sql语句描述，==
+
+ALTER TABLE em_config ADD isurlrewrite enum('n','y') NOT NULL default 'n' AFTER iscomment;
+系统设置增加URL重写选项
