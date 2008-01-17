@@ -101,7 +101,7 @@ switch (condition)
 {
 　　case ABC:
 　　　　statements;
-       break;
+                break;
 　　case DEF:
 　　　  statements;
 　　　  break;
