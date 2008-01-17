@@ -6,5 +6,5 @@
 
 
 ===2.5.0 －－－>new version ===
-ALTER TABLE em_config ADD isurlrewrite enum('n','y') NOT NULL default 'n' AFTER iscomment;
+1. ALTER TABLE em_config ADD isurlrewrite enum('n','y') NOT NULL default 'n' AFTER iscomment;
 系统设置增加URL重写选项
