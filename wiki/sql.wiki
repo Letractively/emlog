@@ -6,3 +6,6 @@
 ===2.5.0 －－－>new version ===
 1. ALTER TABLE em_config ADD isurlrewrite enum('n','y') NOT NULL default 'n' AFTER iscomment;
 系统设置增加URL重写选项
+
+2. ALTER TABLE `em_comment` ADD `url` VARCHAR( 75 ) NOT NULL AFTER `mail` ;
+网友评论增加主页选项
