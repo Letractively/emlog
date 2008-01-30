@@ -3,7 +3,7 @@
 The following is:
   * A list
   * Of bulleted items
-    # This is a numbered sublist
+    # 垃圾引用过滤
     # Which is done by indenting further
   * And back to the main bulleted list
 
@@ -14,7 +14,6 @@ The following is:
 =更新记录如下:=
 
 ==功能增加：==
-
 * 垃圾引用过滤
 * 博主回复评论
 * 显示日志全文页面增加该日志的上一篇日志和下一篇日志标题连接
