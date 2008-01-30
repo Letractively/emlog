@@ -1,6 +1,12 @@
 #summary 正在开发中的emlog进度记录
 
 
+*bold*
+_italic_
+~~strike~~
+^superscript^
+,,subscript,,
+`inline code`
 ^superscript^
 
 ==新增特性：==
