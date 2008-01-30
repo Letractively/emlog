@@ -11,9 +11,7 @@ The following is:
  * With a single leading space
  * Notice that it is rendered  # At the same levels  # As the above lists.
  * Despite the different indentation levels.
-=更新记录如下:=
 
-==功能增加：==
 # 垃圾引用过滤
 # 博主回复评论
 # 显示日志全文页面增加该日志的上一篇日志和下一篇日志标题连接
