@@ -9,3 +9,5 @@
 
 2. ALTER TABLE `em_comment` ADD `url` VARCHAR( 75 ) NOT NULL AFTER `mail` ;
 网友评论增加主页选项
+
+3. ALTER TABLE `em_config` CHANGE `iscomment` `ischkcomment` ENUM( 'n', 'y' ) NULL DEFAULT 'n' 重命名是否开启评论审核的字段
