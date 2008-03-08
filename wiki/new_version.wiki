@@ -1,4 +1,4 @@
-#summary 正在开发中的emlog2.6开发进度记录
+#summary emlog2.6开发记录[完成]
 
 ==新增特性：==
 
