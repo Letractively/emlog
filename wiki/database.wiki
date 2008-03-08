@@ -1,3 +1,5 @@
+#summary emlog2.6.0数据字典
+
 em_attachment
 {{{
 字段 类型 Null 默认 注释 
