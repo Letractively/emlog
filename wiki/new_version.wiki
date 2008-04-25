@@ -4,22 +4,34 @@
 
 ==新增特性：==
 
- * wap 功能 [完成 50%]
- * 心情记录，有点类似 tiwwter 以及qq的滔滔 ,随时记录你的心情感受，集成到wap页面可以随时随地记录你的心情  [完成 80%]
- * 日志自动保存，解决session过期导致的日志丢失
+ * wap功能 手机上的emlog 让你随身随地浏览博客书写心情
+ * tiwwter 功能 一句话博客
+ * 日志自动保存，你只管认真的写日志，其他的交给emlog吧。
 
 ==功能优化：==
 
- * 附件上传方式【上次遗留，这次务必完成】
- * 优化数据库备份相关功能，使得备份体验和成功率更高，适应性更好
+ * 数据库备份功能，兼容性更好。使得备份体验和成功率更高，适应性更好
+ * 优化图片生成缩略图部分，提高兼容性可靠性
+ * 登录方式的改进，前天也可以进行简单的管理操作
+ * 验证码好看了点：） 
+ 
 
 ==BUG修复==
 
 
 ==数据库变更记录==
 
-2.6.0 －－－>new version
+2.6.0 －－－>2.6.5
+
+CREATE TABLE em_twitter (
+id INT NOT NULL AUTO_INCREMENT ,
+content VARCHAR(255) NOT NULL ,
+date VARCHAR(10) NOT NULL ,
+PRIMARY KEY (id)
+);
+
+ALTER TABLE `em_config` ADD `index_twnum` TINYINT( 3 ) UNSIGNED DEFAULT '0' NOT NULL AFTER `index_tagnum` ;
 
 
 
-==看来这次的任务比较艰巨啊。我希望在 6月1日 儿童节 可以发布==
+==初步定为5.1后发布2.6.5==
