@@ -88,6 +88,8 @@ Twitter 顾名思义就是唠叨的意思。不知道你是否有这样的感觉
 从2.6.5开始你可以在"背景音乐"设置里面为音乐加上简短的介绍
 
 如：
-http://www.emlog.net/music/jay.mp3	周杰伦：简单爱
 
-http://www.emlog.net/music/jay2.mp3	周杰伦：2002年的第一场雪
+{{{
+http://www.emlog.net/music/jay.mp3	周杰伦：简单爱
+http://www.emlog.net/music/snsyzb.mp3	张震岳：思念是一种病
+}}}
