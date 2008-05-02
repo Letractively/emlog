@@ -1,0 +1,3 @@
+<?php
+$user_cache = array('photo' => "",'name' =>"",'mail'	=>"",'des'=>"welcome to emlog!");
+?>
