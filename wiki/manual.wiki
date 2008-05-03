@@ -1,4 +1,5 @@
 #summary emlog 使用手册（功能介绍）.
+#labels Featured
 
 =如下功能基于emlog2.6.5=
 
