@@ -1,4 +1,5 @@
 #summary Emlog 安装说明
+#labels Featured
 
 
 安装步骤 :
