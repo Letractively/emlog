@@ -9,8 +9,8 @@ attdes   varchar(255) 是
 filename   varchar(255) 是      
 filesize   int(10) 是  0    
 filepath   varchar(255) 是      
-addtime   varchar(10) 是      
-}}}
+addtime   varchar(10) 是    
+}}}  
 
 em_blog
 {{{
@@ -26,8 +26,8 @@ top   enum('n', 'y') 是  n
 hide   enum('n', 'y') 是  n    
 allow_remark   enum('n', 'y') 是  y    
 allow_tb   enum('n', 'y') 是  y    
-attcache   text 是     
-}}}
+attcache   text 是    
+}}}  
 
 em_comment
 {{{
@@ -53,7 +53,8 @@ blogurl   varchar(255) 是
 icp   varchar(255) 是      
 index_lognum   tinyint(3)  是  0    
 index_comnum   tinyint(3)  是  0    
-index_tagnum   tinyint(3)  是  1    
+index_tagnum   tinyint(3)  是  0    
+index_twnum   tinyint(3)  是  0    
 comment_subnum   tinyint(3)  是  0    
 login_code   enum('n', 'y') 是  n    
 comment_code   enum('n', 'y') 是  n    
@@ -62,9 +63,8 @@ isurlrewrite   enum('n', 'y') 是  n
 istrackback   enum('n', 'y') 是  y    
 nonce_templet   varchar(255) 是      
 timezone   float 是  8    
-exarea   text 是      
-
-}}}
+exarea   text 是  
+}}}    
 
 em_link
 {{{
@@ -90,8 +90,8 @@ em_tag
 tid   mediumint(8)  是  NULL    
 tagname   varchar(60) 是      
 usenum   mediumint(8)  是  1    
-gid   text 是      
-}}}
+gid   text 是    
+}}}  
 
 em_trackback
 {{{
@@ -103,9 +103,16 @@ date   varchar(10) 是
 excerpt   text 是      
 url   varchar(255) 是      
 blog_name   varchar(255) 是      
-ip   varchar(16) 是      
+ip   varchar(16) 是   
+}}}   
 
-}}}
+em_twitter
+{{{
+字段 类型 Null 默认 注释 
+id   int(11) 是  NULL    
+content   varchar(255) 是      
+date   varchar(10) 是   
+}}}   
 
 em_user
 {{{
@@ -116,5 +123,5 @@ password   varchar(32) 是
 nickname   varchar(20) 是      
 photo   varchar(255) 是      
 email   varchar(60) 是      
-description   varchar(255) 是    
-}}}
+description   varchar(255) 是     
+}}} 
