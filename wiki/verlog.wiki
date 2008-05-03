@@ -19,9 +19,6 @@
  * 附件上传，用户体验有所改善 
 
 ====数据库变更记录====
-
-2.6.0 －－－>2.6.5
-
 {{{
  CREATE TABLE em_twitter (
  id INT NOT NULL AUTO_INCREMENT ,
