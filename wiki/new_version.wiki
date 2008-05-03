@@ -1,4 +1,4 @@
-#summary 正在开发中的emlog2.6.5 进度
+#summary 正在开发中的进度
 
 
 
@@ -34,4 +34,3 @@
 ALTER TABLE `em_config` ADD `index_twnum` TINYINT( 3 ) UNSIGNED DEFAULT '0' NOT NULL AFTER `index_tagnum` ;
 
 }}}
-==初步定为5.1后发布2.6.5==
