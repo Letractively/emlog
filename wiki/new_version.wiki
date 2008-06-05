@@ -20,5 +20,6 @@
 
 ==数据库变更记录==
 
-增加Gzip开关设定选项
-ALTER TABLE `blog_config` ADD `isgzipenable` ENUM( 'n', 'y' ) NOT NULL DEFAULT 'n' AFTER `isurlrewrite` ;
+  增加Gzip开关设定选项
+
+   ALTER TABLE `blog_config` ADD `isgzipenable` ENUM( 'n', 'y' ) NOT NULL DEFAULT 'n' AFTER `isurlrewrite` ;
