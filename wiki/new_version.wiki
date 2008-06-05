@@ -9,6 +9,7 @@
 ==功能优化：==
 
 优化了url伪静态，灵活性和可维护性大大提升
+增加博客Gzip开关,让博客打开速度更快,流量更小
 
 ==BUG修复==
 
@@ -17,3 +18,6 @@
 
 
 ==数据库变更记录==
+
+增加Gzip开关设定选项
+ALTER TABLE `blog_config` ADD `isgzipenable` ENUM( 'n', 'y' ) NOT NULL DEFAULT 'n' AFTER `isurlrewrite` ;
