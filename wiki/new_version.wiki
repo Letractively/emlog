@@ -3,23 +3,21 @@
 
 ==新增特性：==
 
-留言板:emlog决定增加留言板，既然要做 希望做的好一点：）
-
+ *留言板 该也许要夭折了：（ 
 
 ==功能优化：==
 
-   优化了url伪静态，灵活性和可维护性大大提升
-
-   增加博客Gzip开关,让博客打开速度更快,流量更小
+ *优化了url伪静态，灵活性和可维护性大大提升
+ *增加博客Gzip开关,让博客打开速度更快,流量更小
 
 ==BUG修复==
 
-修复了时差导致的twitter 发布日期错误
-修复了wap的相关不足
+ *修复了时差导致的twitter 发布日期错误
+ *修复了wap的相关不足
 
 
 ==数据库变更记录==
 
-  增加Gzip开关设定选项
+ *增加Gzip开关设定选项
 
    ALTER TABLE `blog_config` ADD `isgzipenable` ENUM( 'n', 'y' ) NOT NULL DEFAULT 'n' AFTER `isurlrewrite` ;
