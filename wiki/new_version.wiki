@@ -26,6 +26,9 @@
  * 增加Gzip开关设定选项
 
    ALTER TABLE `em_config` ADD `isgzipenable` ENUM( 'n', 'y' ) NOT NULL DEFAULT 'n' AFTER `isurlrewrite` ;
+
    ALTER TABLE `em_user` CHANGE `description` `description` TEXT NOT NULL
+
    ALTER TABLE `em_config` DROP `index_tagnum` 
+
    ALTER TABLE `em_attachment` DROP `attdes` 
