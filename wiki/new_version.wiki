@@ -1,23 +1,31 @@
-#summary 正在开发中的进度
+#summary 开发中，尚未发布的emlog
 
+=emlog 2.7.0 蓄势待发=
 
-==新增特性：==
+==变更记录：==
 
- * 留言板 该功能也许要夭折了：（ 
-
-==功能优化：==
-
- * 优化了url伪静态，灵活性和可维护性大大提升
- * 增加博客Gzip开关,让博客打开速度更快,流量更小
+ * 改造附件上传和管理 附件管理更加直观方便。
+ * 更新FCK编辑器到2.6，完全兼容 ie6+ ff2+ safari opera 
+ * 更换了新的缓存逻辑,采用了将PHP数据序列化存储为文件的方式，相比原来生成PHP文件缓存的方式速度更快,代码更优雅
+ * 重构了前后台的模板标签，让模板制作更加方便清晰。
+ * 重构了URL重写的逻辑，可维护性和扩展性提高
+ * 优化前台标签对应日志和搜索日志列表呈现方式
+ * 新增前台恢复评论和修改个人状态功能
+ * 增加博客Gzip压缩功能,让博客打开速度更快,流量更小
+ * 优化标签字体大小的算法，更人性化的呈现
 
 ==BUG修复==
 
  * 修复了时差导致的twitter 发布日期错误
  * 修复了wap的相关不足
+ * 修复后台草稿管理多于1页后的bug
 
 
 ==数据库变更记录==
 
  * 增加Gzip开关设定选项
 
-   ALTER TABLE `blog_config` ADD `isgzipenable` ENUM( 'n', 'y' ) NOT NULL DEFAULT 'n' AFTER `isurlrewrite` ;
+   ALTER TABLE `em_config` ADD `isgzipenable` ENUM( 'n', 'y' ) NOT NULL DEFAULT 'n' AFTER `isurlrewrite` ;
+   ALTER TABLE `em_user` CHANGE `description` `description` TEXT NOT NULL
+   ALTER TABLE `em_config` DROP `index_tagnum` 
+   ALTER TABLE `em_attachment` DROP `attdes` 
