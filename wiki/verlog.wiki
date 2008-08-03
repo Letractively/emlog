@@ -4,7 +4,41 @@
 
 记录emlog的每一次重大的更新  
 
-=emlog2.6.5=
+=emlog 2.7.0=
+发布时间：2008/8/3 
+
+变更记录:
+
+ * 改造附件上传和管理 附件管理更加直观方便。
+ * 更新FCK编辑器到2.6，完全兼容 ie6+ ff2+ safari opera 
+ * 优化缓存模块，速度更快，代码更优雅
+ * 重构了前后台的模板标识，让模板制作更加方便清晰。
+ * 重构了URL重写的逻辑，可维护性和扩展性提高
+ * 优化前台标签对应日志和搜索日志列表呈现方式
+ * 新增前台恢复评论和修改个人状态功能
+ * 增加博客Gzip压缩功能,让博客打开速度更快,流量更小
+ * 优化标签字体大小的算法，去掉了更多标签的页面。
+
+BUG修复
+
+ * 修复了时差导致的twitter 发布日期错误
+ * 修复了wap的相关不足
+ * 修复后台草稿管理多于1页后的bug
+
+
+==数据库变更记录==
+
+ * 增加Gzip开关设定选项
+
+   ALTER TABLE `em_config` ADD `isgzipenable` ENUM( 'n', 'y' ) NOT NULL DEFAULT 'n' AFTER `isurlrewrite` ;
+
+   ALTER TABLE `em_user` CHANGE `description` `description` TEXT NOT NULL
+
+   ALTER TABLE `em_config` DROP `index_tagnum` 
+
+   ALTER TABLE `em_attachment` DROP `attdes` 
+
+==emlog2.6.5==
 发布时间：2008/5/3 
 ====新增特性：====
  * wap功能 手机上的emlog 让你随身随地浏览博客书写心情（wap第一版暂不支持写日志，但可以写twitter）
