@@ -1,13 +1,6 @@
 #summary Emlog 安装说明
 #labels Featured
 
-
-安装步骤 :
-
-
-
-Emlog 安装说明 
-
 安装步骤 :
 
 1.将下载解压后的"src"文件夹下的所有文件上传到web服务器预安装emlog的根目录。 
