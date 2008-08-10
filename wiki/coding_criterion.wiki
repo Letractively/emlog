@@ -130,7 +130,7 @@ if (isset($_REQUEST['GLOBALS']) OR isset($_FILES['GLOBALS']))
 ===大括号{}、if和switch===
 
   * 首尾括号与关键字同列；
-  * if结构中，else和elseif与前后两个大括号同行，左右各一个空格。另外，即便if后只有一行语句，仍然需要加入大括号，以保证结构清晰；
+  * if结构中，else和elseif与前后两个大括号同行。另外，即便if后只有一行语句，仍然需要加入大括号，以保证结构清晰；
   * switch结构中，通常当一个case块处理后，将跳过之后的case块处理，因此大多数情况下需要添加break。break的位置视程序逻辑，与case同在一行，或新起一行均可，但同一switch体中，break的位置格式应当保持一致。
 以下是符合上述规范的例子：
 
