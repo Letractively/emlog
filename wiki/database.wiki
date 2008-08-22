@@ -1,4 +1,5 @@
 emlog_attachment
+{{{
 字段 类型 Null 默认 注释 
 aid  smallint(5)  否   
 blogid  mediumint(8)  否 0  
@@ -7,7 +8,10 @@ filesize  int(10) 否 0
 filepath  varchar(255) 否   
 addtime  varchar(10) 否   
 
+}}}
+
 emlog_blog
+{{{
 字段 类型 Null 默认 注释 
 gid  mediumint(8)  否   
 title  varchar(255) 否   
@@ -22,7 +26,9 @@ allow_remark  enum('n', 'y') 否 y
 allow_tb  enum('n', 'y') 否 y  
 attcache  text 否   
 
+}}}
 emlog_comment
+{{{
 字段 类型 Null 默认 注释 
 cid  mediumint(8)  否   
 gid  mediumint(8)  否 0  
@@ -33,8 +39,10 @@ reply  text 否
 mail  varchar(60) 否   
 url  varchar(75) 否   
 hide  enum('n', 'y') 否 n  
+}}}
 
 emlog_config
+{{{
 字段 类型 Null 默认 注释 
 site_key  varchar(255) 否   
 blogname  varchar(255) 否   
@@ -54,29 +62,38 @@ istrackback  enum('n', 'y') 否 y
 nonce_templet  varchar(255) 否   
 timezone  float 否 8  
 exarea  text 否   
+}}}
 
 emlog_link
+{{{
 字段 类型 Null 默认 注释 
 id  smallint(4)  否   
 sitename  varchar(30) 否   
 siteurl  varchar(75) 否   
 description  varchar(255) 否   
 taxis  smallint(4)  否 0  
+}}}
 
 emlog_statistics
+{{{
 字段 类型 Null 默认 注释 
 day_view_count  int(11)  否 0  
 view_count  int(11)  是 0  
 curdate  varchar(20) 是 NULL  
+}}}
 
 emlog_tag
+{{{
 字段 类型 Null 默认 注释 
 tid  mediumint(8)  否   
 tagname  varchar(60) 否   
 usenum  mediumint(8)  否 1  
-gid  text 否   
+gid  text 否 
+
+}}}  
 
 emlog_trackback
+{{{
 字段 类型 Null 默认 注释 
 tbid  mediumint(8)  否   
 gid  mediumint(8)  否 0  
@@ -86,14 +103,18 @@ excerpt  text 否
 url  varchar(255) 否   
 blog_name  varchar(255) 否   
 ip  varchar(16) 否   
+}}}
 
 emlog_twitter
+{{{
 字段 类型 Null 默认 注释 
 id  int(11) 否   
 content  varchar(255) 否   
 date  varchar(10) 否   
+}}}
 
 emlog_user
+{{{
 字段 类型 Null 默认 注释 
 uid  tinyint(3)  否   
 username  varchar(32) 否   
@@ -102,4 +123,4 @@ nickname  varchar(20) 否
 photo  varchar(255) 否   
 email  varchar(60) 否   
 description  text 否   
-
+}}}
