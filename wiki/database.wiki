@@ -1,127 +1,105 @@
-#summary emlog2.6.5数据字典
-
-em_attachment
-{{{
+emlog_attachment
 字段 类型 Null 默认 注释 
-aid   smallint(5)  是  NULL    
-blogid   mediumint(8)  是  0    
-attdes   varchar(255) 是      
-filename   varchar(255) 是      
-filesize   int(10) 是  0    
-filepath   varchar(255) 是      
-addtime   varchar(10) 是    
-}}}  
+aid  smallint(5)  否   
+blogid  mediumint(8)  否 0  
+filename  varchar(255) 否   
+filesize  int(10) 否 0  
+filepath  varchar(255) 否   
+addtime  varchar(10) 否   
 
-em_blog
-{{{
+emlog_blog
 字段 类型 Null 默认 注释 
-gid   mediumint(8)  是  NULL    
-title   varchar(255) 是      
-date   varchar(10) 是      
-content   text 是      
-views   mediumint(8)  是  0    
-comnum   mediumint(8)  是  0    
-tbcount   mediumint(8)  是  0    
-top   enum('n', 'y') 是  n    
-hide   enum('n', 'y') 是  n    
-allow_remark   enum('n', 'y') 是  y    
-allow_tb   enum('n', 'y') 是  y    
-attcache   text 是    
-}}}  
+gid  mediumint(8)  否   
+title  varchar(255) 否   
+date  varchar(10) 否   
+content  text 否   
+views  mediumint(8)  否 0  
+comnum  mediumint(8)  否 0  
+tbcount  mediumint(8)  否 0  
+top  enum('n', 'y') 否 n  
+hide  enum('n', 'y') 否 n  
+allow_remark  enum('n', 'y') 否 y  
+allow_tb  enum('n', 'y') 否 y  
+attcache  text 否   
 
-em_comment
-{{{
+emlog_comment
 字段 类型 Null 默认 注释 
-cid   mediumint(8)  是  NULL    
-gid   mediumint(8)  是  0    
-date   varchar(10) 是      
-poster   varchar(20) 是      
-comment   text 是      
-reply   text 是      
-mail   varchar(60) 是      
-url   varchar(75) 是      
-hide   enum('n', 'y') 是  n    
-}}}
+cid  mediumint(8)  否   
+gid  mediumint(8)  否 0  
+date  varchar(10) 否   
+poster  varchar(20) 否   
+comment  text 否   
+reply  text 否   
+mail  varchar(60) 否   
+url  varchar(75) 否   
+hide  enum('n', 'y') 否 n  
 
-em_config
-{{{
+emlog_config
 字段 类型 Null 默认 注释 
-site_key   varchar(255) 是      
-blogname   varchar(255) 是      
-bloginfo   varchar(255) 是      
-blogurl   varchar(255) 是      
-icp   varchar(255) 是      
-index_lognum   tinyint(3)  是  0    
-index_comnum   tinyint(3)  是  0    
-index_tagnum   tinyint(3)  是  0    
-index_twnum   tinyint(3)  是  0    
-comment_subnum   tinyint(3)  是  0    
-login_code   enum('n', 'y') 是  n    
-comment_code   enum('n', 'y') 是  n    
-ischkcomment   enum('n', 'y') 是  n    
-isurlrewrite   enum('n', 'y') 是  n    
-istrackback   enum('n', 'y') 是  y    
-nonce_templet   varchar(255) 是      
-timezone   float 是  8    
-exarea   text 是  
-}}}    
+site_key  varchar(255) 否   
+blogname  varchar(255) 否   
+bloginfo  varchar(255) 否   
+blogurl  varchar(255) 否   
+icp  varchar(255) 否   
+index_lognum  tinyint(3)  否 0  
+index_comnum  tinyint(3)  否 0  
+index_twnum  tinyint(3)  否 0  
+comment_subnum  tinyint(3)  否 0  
+login_code  enum('n', 'y') 否 n  
+comment_code  enum('n', 'y') 否 n  
+ischkcomment  enum('n', 'y') 否 n  
+isurlrewrite  enum('n', 'y') 否 n  
+isgzipenable  enum('n', 'y') 否 n  
+istrackback  enum('n', 'y') 否 y  
+nonce_templet  varchar(255) 否   
+timezone  float 否 8  
+exarea  text 否   
 
-em_link
-{{{
+emlog_link
 字段 类型 Null 默认 注释 
-id   smallint(4)  是  NULL    
-sitename   varchar(30) 是      
-siteurl   varchar(75) 是      
-description   varchar(255) 是      
-taxis   smallint(4)  是  0    
-}}}
+id  smallint(4)  否   
+sitename  varchar(30) 否   
+siteurl  varchar(75) 否   
+description  varchar(255) 否   
+taxis  smallint(4)  否 0  
 
-em_statistics
-{{{
+emlog_statistics
 字段 类型 Null 默认 注释 
-day_view_count   int(11)  是  0    
-view_count   int(11)  是  0    
-curdate   varchar(20) 是  NULL    
-}}}
+day_view_count  int(11)  否 0  
+view_count  int(11)  是 0  
+curdate  varchar(20) 是 NULL  
 
-em_tag
-{{{
+emlog_tag
 字段 类型 Null 默认 注释 
-tid   mediumint(8)  是  NULL    
-tagname   varchar(60) 是      
-usenum   mediumint(8)  是  1    
-gid   text 是    
-}}}  
+tid  mediumint(8)  否   
+tagname  varchar(60) 否   
+usenum  mediumint(8)  否 1  
+gid  text 否   
 
-em_trackback
-{{{
+emlog_trackback
 字段 类型 Null 默认 注释 
-tbid   mediumint(8)  是  NULL    
-gid   mediumint(8)  是  0    
-title   varchar(255) 是      
-date   varchar(10) 是      
-excerpt   text 是      
-url   varchar(255) 是      
-blog_name   varchar(255) 是      
-ip   varchar(16) 是   
-}}}   
+tbid  mediumint(8)  否   
+gid  mediumint(8)  否 0  
+title  varchar(255) 否   
+date  varchar(10) 否   
+excerpt  text 否   
+url  varchar(255) 否   
+blog_name  varchar(255) 否   
+ip  varchar(16) 否   
 
-em_twitter
-{{{
+emlog_twitter
 字段 类型 Null 默认 注释 
-id   int(11) 是  NULL    
-content   varchar(255) 是      
-date   varchar(10) 是   
-}}}   
+id  int(11) 否   
+content  varchar(255) 否   
+date  varchar(10) 否   
 
-em_user
-{{{
+emlog_user
 字段 类型 Null 默认 注释 
-uid   tinyint(3)  是  NULL    
-username   varchar(32) 是      
-password   varchar(32) 是      
-nickname   varchar(20) 是      
-photo   varchar(255) 是      
-email   varchar(60) 是      
-description   varchar(255) 是     
-}}} 
+uid  tinyint(3)  否   
+username  varchar(32) 否   
+password  varchar(32) 否   
+nickname  varchar(20) 否   
+photo  varchar(255) 否   
+email  varchar(60) 否   
+description  text 否   
+
