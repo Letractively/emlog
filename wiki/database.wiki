@@ -1,3 +1,6 @@
+#summary emlog2.7.0数据库结构
+
+
 emlog_attachment
 {{{
 字段 类型 Null 默认 注释 
