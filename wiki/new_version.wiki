@@ -27,3 +27,5 @@ BUG修复
 3.日历在9月时下翻到10月变成1月的
 
 4.IE6不支持中文标签超链接
+
+ALTER TABLE `emlog_config` ADD `widget_list` VARCHAR( 255 ) NOT NULL ;
