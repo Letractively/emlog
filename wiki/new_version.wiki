@@ -2,6 +2,8 @@
 
 =emlog 2.7.5 开发计划 =
 
+http://www.emlog.net/blog/uploadfile/200810/638db114fdc25b3f14e4dccc937e64d920081005091402.jpg
+
 重要新特性：
 
 1.改造侧边栏，实现可定制。
