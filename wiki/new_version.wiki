@@ -3,25 +3,30 @@
 =emlog 2.7.5 开发计划 =
 
 重要新特性：
-
+{{{
 1.改造侧边栏，实现可定制。
 2.登录验证改造
 3.首次采用mvc架构，代码可维护性更佳
 4.后台风格转换
+}}}
 
 优化：
 
+{{{
 1.前台登录改造
 2.模板路径采用变量
 3.加强前台安全性
 4.代码风格标准化
+}}}
 
 BUG修复
 
+{{{
 1.新日志存为草稿时，所属新标签显示在首页
 2.上传新头像不会删除原有头像
 3.日历在9月时下翻到10月变成1月的
 4.IE6不支持中文标签超链接
+}}}
 
 ALTER TABLE `emlog_config` ADD `widget_list` VARCHAR( 255 ) NOT NULL ;
 ALTER TABLE `emlog_user` CHANGE `password` `password` VARCHAR( 64 ) NOT NULL 
