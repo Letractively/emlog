@@ -25,3 +25,4 @@ BUG修复
 
 ALTER TABLE `emlog_config` ADD `widget_list` VARCHAR( 255 ) NOT NULL ;
 ALTER TABLE `emlog_user` CHANGE `password` `password` VARCHAR( 64 ) NOT NULL 
+ALTER TABLE `emlog_blog` DROP `attcache` 
