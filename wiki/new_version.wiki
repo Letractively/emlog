@@ -24,6 +24,18 @@ BUG修复
 4.IE6不支持中文标签超链接
 }}}
 
-ALTER TABLE `emlog_config` ADD `widget_list` VARCHAR( 255 ) NOT NULL ;
+数据库变更
+{{{
 ALTER TABLE `emlog_user` CHANGE `password` `password` VARCHAR( 64 ) NOT NULL 
 ALTER TABLE `emlog_blog` DROP `attcache` 
+ALTER TABLE `emlog_blog` ADD `sortid` TINYINT( 3 ) NOT NULL DEFAULT '-1' AFTER `content`
+ALTER TABLE `emlog_blog` ADD `attnum` MEDIUMINT( 8 ) UNSIGNED NOT NULL DEFAULT '0' AFTER `tbcount`
+CREATE TABLE IF NOT EXISTS `emlog_sort` (
+  `sid` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
+  `sortname` varchar(255) NOT NULL DEFAULT '',
+  `taxis` tinyint(3) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`sid`)
+)
+
+
+}}}
