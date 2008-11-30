@@ -37,5 +37,14 @@ CREATE TABLE IF NOT EXISTS `emlog_sort` (
   PRIMARY KEY (`sid`)
 )
 
+DROP TABLE `emlog_config` 
+
+CREATE TABLE IF NOT EXISTS `emlog_options` (
+  `option_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `option_name` varchar(255) NOT NULL,
+  `option_value` longtext NOT NULL,
+  PRIMARY KEY (`option_id`)
+)
+
 
 }}}
