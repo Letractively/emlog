@@ -2,9 +2,61 @@
 
 
 
-记录emlog的每一次重大的更新  
+记录emlog的每一次重大的更新
 
-=emlog 2.7.0=
+=emlog 3.0.0=
+
+重要新特性及优化：
+{{{
+1.新增侧边栏组件（widget）管理，实现侧边栏的高度可定制性
+2.改进登录验证部分，实现用户状态的长久保存，不必频繁登录
+3.大幅优化代码结构，后续开发、维护更加方便快捷，代码可读性更好
+4.优化后台界面，后台用户体验得到提升
+5.新增日志分类功能
+6.改进日志管理，可以按照标签和分类检索
+7.新增侧边栏项目：随机日志、最新日志
+8.新增日志显示页面 相关日志 
+9.改进评论显示顺序，为日后的分页显示做准备
+}}}
+
+BUG修复
+
+{{{
+1.新日志存为草稿时，所属新标签显示在首页
+2.上传新头像不会删除原有头像
+3.日历在9月时下翻到10月变成1月的
+4.IE6不支持中文标签超链接
+}}}
+
+数据库变更
+{{{
+ALTER TABLE emlog_user CHANGE password password VARCHAR( 64 ) NOT NULL;
+ALTER TABLE emlog_blog DROP attcache;
+ALTER TABLE emlog_blog CHANGE date date BIGINT( 20 ) NOT NULL;
+ALTER TABLE emlog_attachment CHANGE addtime addtime BIGINT( 20 ) NOT NULL;
+ALTER TABLE emlog_comment CHANGE date date BIGINT( 20 ) NOT NULL;
+ALTER TABLE emlog_trackback CHANGE date date BIGINT( 20 ) NOT NULL;
+ALTER TABLE emlog_twitter CHANGE date date BIGINT( 20 ) NOT NULL;
+ALTER TABLE emlog_blog ADD sortid TINYINT( 3 ) NOT NULL DEFAULT '-1' AFTER content;
+ALTER TABLE emlog_blog ADD attnum MEDIUMINT( 8 ) UNSIGNED NOT NULL DEFAULT '0' AFTER tbcount;emlog_tbcountemlog_
+CREATE TABLE IF NOT EXISTS emlog_sort (
+  emlog_sidemlog_ tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
+  emlog_sortnameemlog_ varchar(255) NOT NULL DEFAULT '',
+  emlog_taxisemlog_ tinyint(3) NOT NULL DEFAULT '0',
+  PRIMARY KEY (emlog_sidemlog_)
+)
+
+DROP TABLE emlog_configemlog_ 
+
+CREATE TABLE IF NOT EXISTS emlog_options (
+  emlog_option_idemlog_ int(11) unsigned NOT NULL AUTO_INCREMENT,
+  emlog_option_nameemlog_ varchar(255) NOT NULL,
+  emlog_option_valueemlog_ longtext NOT NULL,
+  PRIMARY KEY (emlog_option_idemlog_)
+)
+}}}
+
+==emlog 2.7.0==
 发布时间：2008/8/3 
 
 变更记录:
