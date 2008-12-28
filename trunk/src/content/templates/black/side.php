@@ -1,0 +1,92 @@
+<div id="sidebar">
+	<div id="sbarheader">
+	<div class="ti"><h1><a href="./"><?php echo $blogname; ?></a></h1></div>
+			<div class="des"><?php echo $bloginfo; ?></div>
+	<div class="rsssubscribe">
+	<a href="./rss.php">
+	<img style="vertical-align:middle" border="0" src="<?php echo $em_tpldir; ?>images/rss.gif" alt="Subscribe to <?php echo $blogname; ?>" /><br/>
+	Subscribe via RSS</a>
+	</div>
+	</div>
+	<div id="nav">
+		<ul>
+			<li><a href="./">首页</a></li>
+			<li><a href="http://www.emlog.net" target="_blank">emlog</a></li>
+			<?php if(ISLOGIN): ?>
+			<li><a href="./admin/add_log.php">写日志</a></li>
+			<li><a href="./admin/">管理中心</a></li>
+			<li><a href="./admin/index.php?action=logout">退出</a></li>
+			<?php else: ?>
+			<li><a href="./admin/index.php">登录</a></li>
+			<?php endif; ?>
+		</ul>
+	</div>
+	<div id="sbarsearch">
+	<form method="get" id="searchform" action="index.php">
+	<input value="" type="text" name="keyword" class="s" />
+	<input type="submit" class="sub" value="search" onclick="return keyw()"/>
+	</form>
+	</div>
+<div class="sbarright">
+<ul>
+<?php 
+require_once (getViews('function'));
+$widgets = !empty($options_cache['widgets1']) ? unserialize($options_cache['widgets1']) : array();
+$i = 0;
+foreach ($widgets as $val)
+{
+	$widget_title = @unserialize($options_cache['widget_title']);
+	$custom_title = @unserialize($options_cache['custom_title1']);
+	$custom_content = @unserialize($options_cache['custom_content1']);
+	$callback = 'widget_'.$val;
+	if($val == 'custom_text')
+	{
+		if(function_exists($callback))
+		{
+			call_user_func($callback, $custom_title[$i], $custom_content[$i], $i);
+		}
+		$i++;
+	}else{
+		if(function_exists($callback))
+		{
+			preg_match("/^.*\s\((.*)\)/", $widget_title[$val], $matchs);
+			$wgTitle = isset($matchs[1]) ? $matchs[1] : $widget_title[$val];
+			call_user_func($callback, $wgTitle);
+		}
+	}
+}
+?>
+</ul>
+</div>
+<div class="sbarleft">
+<ul>
+<?php 
+require_once (getViews('function'));
+$widgets = !empty($options_cache['widgets2']) ? unserialize($options_cache['widgets2']) : array();
+$i = 0;
+foreach ($widgets as $val)
+{
+	$widget_title = @unserialize($options_cache['widget_title']);
+	$custom_title = @unserialize($options_cache['custom_title2']);
+	$custom_content = @unserialize($options_cache['custom_content2']);
+	$callback = 'widget_'.$val;
+	if($val == 'custom_text')
+	{
+		if(function_exists($callback))
+		{
+			call_user_func($callback, $custom_title[$i], $custom_content[$i], $i);
+		}
+		$i++;
+	}else{
+		if(function_exists($callback))
+		{
+			preg_match("/^.*\s\((.*)\)/", $widget_title[$val], $matchs);
+			$wgTitle = isset($matchs[1]) ? $matchs[1] : $widget_title[$val];
+			call_user_func($callback, $wgTitle);
+		}
+	}
+}
+?>
+</ul>
+</div>
+</div>
