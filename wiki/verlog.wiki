@@ -4,6 +4,32 @@
 
 记录emlog的每一次重大的更新
 
+=emlog 3.2.0=
+发布时间：2009/6/6
+
+ * 增加插件功能。 
+ * 大幅度改进后台管理的交互和页面设计，用户体验更好。 
+ * 增加自建页面功能、可以方便的创建导航条、留言板 
+ * 增加多人联合撰写功能 
+ * 更换默认模板，更加美观 
+ * 增加Google Picasa相册插件
+ * 优化模板结构
+
+数据库变更
+{{{
+ALTER TABLE {$db_prefix}blog ADD author INT( 10 ) NOT NULL DEFAULT '1' AFTER excerpt;
+ALTER TABLE {$db_prefix}blog ADD type VARCHAR( 20 ) NOT NULL DEFAULT 'blog' AFTER sortid;
+INSERT INTO {$db_prefix}options (option_name, option_value) VALUES ('viewcount_day','$day_view_count');
+INSERT INTO {$db_prefix}options (option_name, option_value) VALUES ('viewcount_all','$view_count');
+INSERT INTO {$db_prefix}options (option_name, option_value) VALUES ('viewcount_date','$curdate');
+INSERT INTO {$db_prefix}options (option_name, option_value) VALUES ('active_plugins','a:1:{i:0;s:13:\"tips/tips.php\";}');
+INSERT INTO {$db_prefix}options (option_name, option_value) VALUES ('navibar','a:0:{}');
+DROP TABLE IF EXISTS {$db_prefix}statistics;
+ALTER TABLE {$db_prefix}user ADD role VARCHAR( 60 ) NOT NULL AFTER nickname;
+ALTER TABLE {$db_prefix}user CHANGE description description VARCHAR( 255 ) NOT NULL;
+UPDATE {$db_prefix}user SET role = 'admin' WHERE uid =1 LIMIT 1;
+}}}
+
 =emlog 3.1.0=
 发布时间：2009/3/7
 
@@ -14,8 +40,7 @@
  * 后台日志管理添加按照分类和标签检索
  * 去掉doc目录下的文本说明，改用更加优雅的readme.html
  * 安装后自动填写博客地址，无需后台设置
-
-其他细节还有待大家自己发现 ……
+ ……
 
 
 数据库变更
