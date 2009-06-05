@@ -30,7 +30,7 @@ ALTER TABLE {$db_prefix}user CHANGE description description VARCHAR( 255 ) NOT N
 UPDATE {$db_prefix}user SET role = 'admin' WHERE uid =1 LIMIT 1;
 }}}
 
-=emlog 3.1.0=
+==emlog 3.1.0==
 发布时间：2009/3/7
 
  * 优化日志撰写逻辑和界面，增加日志摘要、日志加密。
