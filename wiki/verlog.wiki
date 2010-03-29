@@ -11,7 +11,9 @@
  * 升级日志撰写编辑器到ckeditor3.0.1，加载速度大幅提升。
  * 支持多人联合撰写碎语（原twitter）
  * 优化评论管理操作体验
- * 去掉了编辑器上插入日志分割符按钮，但手动输入依然有效。因为该功能如果使用不当会造成页面错位，所以推荐大家在撰写日志的时候填写高级选项里的日志摘要。
+ * 去掉了编辑器上插入日志分割符按钮，但手动输入依然有效。因为该功能如果使用不当会造成页面错位，所以推荐大家在撰写日志的时候
+
+填写高级选项里的日志摘要。
  * 将原来的URL优化独立为固定链接，并支持目录形式的URL格式
  * 优化日志搜索，减少不必要的字数限制
  * 去掉退出时删除session这一无效操作
@@ -111,7 +113,11 @@ DELETE FROM em_options WHERE option_name ='custom_title4' LIMIT 1 ;
 INSERT INTO em_options (option_name, option_value) VALUES ('custom_widget','a:0:{}');
  
 UPDATE em_options
-SET option_value = 'a:8:{i:0;s:7:"blogger";i:1;s:8:"calendar";i:2;s:3:"tag";i:3;s:7:"archive";i:4;s:7:"newcomm";i:5;s:4:"link";i:6;s:6:"search";i:7;s:8:"bloginfo";}' WHERE option_name ='widgets1' LIMIT 1 ; 
+SET option_value = 'a:8:
+
+{i:0;s:7:"blogger";i:1;s:8:"calendar";i:2;s:3:"tag";i:3;s:7:"archive";i:4;s:7:"newcomm";i:5;s:4:"link";i:6;s:6:"search";i:7
+
+;s:8:"bloginfo";}' WHERE option_name ='widgets1' LIMIT 1 ; 
 }}}
 
 
@@ -215,7 +221,7 @@ BUG修复
 发布时间：2008/5/3 
 ====新增特性：====
  * wap功能 手机上的emlog 让你随身随地浏览博客书写心情（wap第一版暂不支持写日志，但可以写twitter）
- * tiwwter 功能 一句话博客
+ * twitter 功能 一句话博客
  * 日志自动保存，你只管认真的写日志，其他的交给emlog吧。
 
 ====功能优化：====
