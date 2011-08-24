@@ -93,7 +93,6 @@ if ($action == 'reply') {
 
     $date = time();
     $name =  $user_cache[UID]['name'];
-
     $rdata = array(
             'tid' => $tid,
             'content' => $r,

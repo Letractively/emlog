@@ -89,7 +89,10 @@ if ($action == 'reply') {
 
     $date = time();
     $name =  ROLE == 'visitor' ? $rname : addslashes($user_cache[UID]['name']);
-
+	$name = htmlspecialchars($name);
+	if (strlen($name) >= 20) {
+		$name = subString($name, 0, 18);
+	}
     $rdata = array(
             'tid' => $tid,
             'content' => $r,
