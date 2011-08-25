@@ -28,6 +28,10 @@ class Comment_Controller {
         	$url = addslashes(BLOG_URL);
         }
 
+        if ($url && strncasecmp($url,'http://',7)) {
+            $url = 'http://'.$url;
+        }
+
         doAction('comment_post');
 
         $Comment_Model = new Comment_Model();
@@ -40,12 +44,12 @@ class Comment_Controller {
             emMsg('评论失败：请填写姓名','javascript:history.back(-1);');
         } elseif (strlen($name) > 20){
             emMsg('评论失败：姓名不符合规范','javascript:history.back(-1);');
-        } elseif ($mail != '' && !checkMail($mail)) {
+       	} elseif ($mail != '' && !checkMail($mail)) {
             emMsg('评论失败：邮件地址不符合规范', 'javascript:history.back(-1);');
         } elseif (ISLOGIN == false && $Comment_Model->isNameAndMailValid($name, $mail) === false){
             emMsg('评论失败：禁止使用管理员昵称或邮箱评论','javascript:history.back(-1);');
-		} elseif (!empty($url) && preg_match('/^(http|https)\://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(:[a-zA-Z0-9]*)?/?([a-zA-Z0-9\-\._\?\,\'/\\\+&amp;%\$#\=~])*$/', $url) == false) {
-			emMsg('评论失败：主页地址不符合规范','javascript:history.back(-1);');
+        } elseif (!empty($url) && preg_match("/^(http|https)\:\/\/[^<>'\"]*$/", $url) == false) {
+            emMsg('评论失败：主页地址不符合规范','javascript:history.back(-1);');
         } elseif (empty($content)) {
             emMsg('评论失败：请填写评论内容','javascript:history.back(-1);');
         } elseif (strlen($content) > 8000) {
