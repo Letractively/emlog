@@ -79,8 +79,6 @@ if($action == 'setwg') {
 			$new_title = isset($_POST['new_title']) ? $_POST['new_title'] : '';
 			$new_content = isset($_POST['new_content']) ? $_POST['new_content'] : '';
 			$rmwg = isset($_GET['rmwg']) ? addslashes($_GET['rmwg']) : '';//要删除的组件id
-			
-			$new_title = preg_replace('/<\?.*?(\?>|$)/', '', $new_title);
 			//添加新自定义组件
 			if($new_content) {
 				//确定组件索引

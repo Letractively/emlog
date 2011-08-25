@@ -88,11 +88,7 @@ if ($action == 'reply') {
     }
 
     $date = time();
-    $name =  ROLE == 'visitor' ? $rname : addslashes($user_cache[UID]['name']);
-	$name = htmlspecialchars($name);
-	if (strlen($name) >= 20) {
-		$name = subString($name, 0, 18);
-	}
+    $name =  subString(ROLE == 'visitor' ? $rname : addslashes($user_cache[UID]['name']), 0, 16);
     $rdata = array(
             'tid' => $tid,
             'content' => $r,
@@ -123,7 +119,7 @@ if ($action == 'reply') {
     $r = htmlClean(stripslashes($r));
     $response = "
          <li>
-         <span class=\"name\">".stripslashes($name)."</span> {$r}<span class=\"time\">{$date}</span>
+         <span class=\"name\">".stripslashes(htmlspecialchars($name))."</span> {$r}<span class=\"time\">{$date}</span>
          <em><a href=\"javascript:re({$tid}, '@{$name}：');\">回复</a></em>
          </li>";
     echo $response;

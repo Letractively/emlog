@@ -118,37 +118,32 @@ function checkMail($email){
  * @param string $strings 预处理字符串
  * @param int $start 开始处 eg:0
  * @param int $length 截取长度
- * @param bool $appendDots 在尾部增加省略号
- * @return string
+ * @return unknown
  */
-function subString($strings, $start, $length, $appendDots = true){
+function subString($strings,$start,$length){
 	$str = substr($strings, $start, $length);
 	$char = 0;
-	$length = strlen($str);
-	for ($i = 0; $i < $length; $i++) {
+	for ($i = 0; $i < strlen($str); $i++){
 		if (ord($str[$i]) >= 128)
-			$char++;
+		$char++;
 	}
-	$str2 = substr($strings, $start, $length + 1);
-	$str3 = substr($strings, $start, $length + 2);
-	if ($char % 3 == 1) {
-		if ($length <= strlen($strings)) {
-			if ($appendDots)
-				$str3 .= '...';
+	$str2 = substr($strings, $start, $length+1);
+	$str3 = substr($strings, $start, $length+2);
+	if ($char % 3 == 1){
+		if ($length <= strlen($strings)){
+			$str3 = $str3 .= '...';
 		}
 		return $str3;
 	}
-	if ($char % 3 == 2) {
+	if ($char%3 == 2){
 		if ($length <= strlen($strings)){
-			if ($appendDots)
-				$str2 .= '...';
+			$str2 = $str2 .= '...';
 		}
 		return $str2;
 	}
-	if ($char % 3 == 0) {
-		if ($length <= strlen($strings)) {
-			if ($appendDots)
-				$str2 .= '...';
+	if ($char%3 == 0){
+		if ($length <= strlen($strings)){
+			$str = $str .= '...';
 		}
 		return $str;
 	}
