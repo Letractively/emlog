@@ -36,8 +36,7 @@ class MakeCache{
 
 首字母小写，其他组合单词首字母大写
 {{{
-function viewCount() 
-{
+function viewCount() {
 
 }
 }}}
