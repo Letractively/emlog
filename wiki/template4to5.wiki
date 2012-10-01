@@ -11,8 +11,8 @@
 }}}
 
 2、header.php
-查找 $blogtitle 替换为  $site_title
-查找 $description 替换为 $site_description
+* 查找 $blogtitle 替换为  $site_title
+* 查找 $description 替换为 $site_description
 将原来导航部分内容替换为 ：
 {{{
 <?php blog_navi();?>
