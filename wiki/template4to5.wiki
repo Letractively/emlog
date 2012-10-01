@@ -1,5 +1,5 @@
 #labels Featured
-1、echo_log.php
+=1、echo_log.php=
 搜索 
 {{{
 <?php blog_att($logid); ?>
@@ -10,7 +10,7 @@
 <p class="att"><?php blog_att($logid); ?></p>
 }}}
 
-2、header.php
+=2、header.php=
 查找 $blogtitle 替换为  $site_title
 ,查找 $description 替换为 $site_description
 将原来导航部分内容替换为 ：
@@ -48,14 +48,14 @@
 <div id="nav"><?php blog_navi();?></div>
 }}}
 
-3、log_list.php
+=3、log_list.php=
 搜索 <?php blog_att($value['logid']); ?> 删除掉他及包容他的html相关代码
 以默认模板为例：需要删除掉17行：
 {{{
 <p class="att"><?php blog_att($value['logid']); ?></p>
 }}}
 
-4、module.php
+=4、module.php=
 侧边栏碎语增加有图片提示
 如模板模板79行
 {{{
@@ -117,7 +117,7 @@ function blog_navi(){
 <?php }?>
 }}}
 
-5、t.php
+=5、t.php=
 增加碎语显示图片：
 以默认模板为例：
 在20行下面增加：
