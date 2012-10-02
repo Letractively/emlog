@@ -146,13 +146,17 @@ $img = empty($val['img']) ? "" : '<a title="查看图片" href="'.BLOG_URL.str_r
 <?php endif;?>
 }}}
 
-page.php里面删除了下面一句：
+=6、page.php=
+
+里面删除了下面一句：
 {{{
 <p class="att"><?php blog_att($logid); ?></p>
 }}}
 module.php里面好像还删除了附件部分
 
-mains.css里面增加了下面几行
+=7、mains.css=
+
+里面增加了下面几行
 {{{
 #nav .current a:link {color:#1F1F1F; text-decoration:underline;}
 #nav .current a:active {color:#1F1F1F; text-decoration:underline;}
