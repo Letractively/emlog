@@ -155,7 +155,7 @@ $img = empty($val['img']) ? "" : '<a title="查看图片" href="'.BLOG_URL.str_r
 <p class="att"><?php blog_att($logid); ?></p>
 }}}
 
-=7、mains.css=
+=7、main.css=
 
 里面增加了下面几行
 {{{
