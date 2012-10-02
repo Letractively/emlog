@@ -150,11 +150,10 @@ $img = empty($val['img']) ? "" : '<a title="查看图片" href="'.BLOG_URL.str_r
 
 =6、page.php=
 
-里面删除了下面一句：
+里面删除了下面一句，去掉附件的直接显示：
 {{{
 <p class="att"><?php blog_att($logid); ?></p>
 }}}
-module.php里面好像还删除了附件部分
 
 =7、mains.css=
 
