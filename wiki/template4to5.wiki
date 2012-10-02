@@ -1,19 +1,21 @@
 #labels Featured
 =1、echo_log.php=
-搜索 
-{{{
-<?php blog_att($logid); ?>
-}}} 
-删除掉他及包容他的html相关代码
+去掉了附件显示相关代码
+
 以默认模板为例：需要删除掉14行：
 {{{
 <p class="att"><?php blog_att($logid); ?></p>
 }}}
 
 =2、header.php=
+
+为实现浏览器标题的设置需要：
+
 查找 $blogtitle 替换为  $site_title
-,查找 $description 替换为 $site_description
-将原来导航部分内容替换为 ：
+
+查找 $description 替换为 $site_description
+
+导航管理的增加需要将原来导航部分内容替换为 ：
 {{{
 <?php blog_navi();?>
 }}}
@@ -49,7 +51,8 @@
 }}}
 
 =3、log_list.php=
-搜索 <?php blog_att($value['logid']); ?> 删除掉他及包容他的html相关代码
+去掉查看日志页面附件显示相关代码
+
 以默认模板为例：需要删除掉17行：
 {{{
 <p class="att"><?php blog_att($value['logid']); ?></p>
@@ -57,6 +60,7 @@
 
 =4、module.php=
 侧边栏碎语增加有图片提示
+
 如模板模板79行
 {{{
 <li><?php echo $value['t']; ?><p><?php echo smartDate($value['date']); ?> </p></li>
@@ -68,6 +72,7 @@
 }}}
 
 增加侧边栏热门日志模块
+
 以默认模板为例：在120行下面插入如下代码：
 {{{
 <?php
@@ -88,6 +93,7 @@ function widget_hotlog($title){
 }}}
 
 增加菜单导航模块
+
 以默认模板为例：在187行下面增加：
 {{{
 <?php
@@ -139,3 +145,22 @@ $img = empty($val['img']) ? "" : '<a title="查看图片" href="'.BLOG_URL.str_r
 {{{
 <?php endif;?>
 }}}
+
+page.php里面删除了下面一句：
+{{{
+<p class="att"><?php blog_att($logid); ?></p>
+}}}
+module.php里面好像还删除了附件部分
+
+mains.css里面增加了下面几行
+{{{
+#nav .current a:link {color:#1F1F1F; text-decoration:underline;}
+#nav .current a:active {color:#1F1F1F; text-decoration:underline;}
+#nav .current a:visited {color:#1F1F1F; text-decoration:underline;}
+#nav .current a:hover {color:#1F1F1F; text-decoration:none;}
+#twitter li .t_img{background:url(images/img.gif) no-repeat;padding: 0 7px;margin: 0 0 0 10px;}
+#tw .loading{background:url(images/loading.gif) no-repeat 200px 2px; height:20px;}
+#tw p .t_img{background:url(images/img.gif) no-repeat;padding: 0 7px;margin: 0 0 0 10px;}
+}}}
+
+=以上内容仅供参考，具体操作还需要开发者根据自己的模板实际情况进行调试=
