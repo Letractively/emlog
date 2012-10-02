@@ -1,4 +1,6 @@
+#summary 模板升级参考（4.2.1到5.0.0）
 #labels Featured
+
 =1、echo_log.php=
 去掉了附件显示相关代码
 
