@@ -2,7 +2,6 @@
 /**
  * 视图控制
  * @copyright (c) Emlog All Rights Reserved
- * $Id$
  */
 
 class View {

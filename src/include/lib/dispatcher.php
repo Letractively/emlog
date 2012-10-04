@@ -2,7 +2,6 @@
 /**
  * 路由分发器
  * @copyright (c) Emlog All Rights Reserved
- * $Id$
  */
 
 class Dispatcher {

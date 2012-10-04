@@ -11,8 +11,7 @@
 <table width="100%" id="adm_bakdata_list" class="item_list">
   <thead>
     <tr>
-      <th width="22"><input onclick="CheckAll(this.form)" type="checkbox" value="on" name="chkall" /></th>
-      <th width="661"><b>备份文件</b></th>
+      <th width="683" colspan="2"><b>备份文件</b></th>
       <th width="226"><b>备份时间</b></th>
       <th width="149"><b>文件大小</b></th>
       <th width="87"></th>
@@ -20,22 +19,26 @@
   </head>
   <tbody>
 	<?php
+		if($bakfiles):
 		foreach($bakfiles  as $value):
 		$modtime = smartDate(filemtime($value),'Y-m-d H:i:s');
 		$size =  changeFileSize(filesize($value));
 		$bakname = substr(strrchr($value,'/'),1);
 	?>
     <tr>
-      <td><input type="checkbox" value="<?php echo $value; ?>" name="bak[]" class="ids" /></td>
-      <td><a href="../content/backup/<?php echo $bakname; ?>"><?php echo $bakname; ?></a></td>
+      <td width="22"><input type="checkbox" value="<?php echo $value; ?>" name="bak[]" class="ids" /></td>
+      <td width="661"><a href="../content/backup/<?php echo $bakname; ?>"><?php echo $bakname; ?></a></td>
       <td><?php echo $modtime; ?></td>
       <td><?php echo $size; ?></td>
       <td><a href="javascript: em_confirm('<?php echo $value; ?>', 'backup');">导入</a></td>
     </tr>
-	<?php endforeach; ?>
+	<?php endforeach;else:?>
+	  <tr><td class="tdcenter" colspan="5">还没有备份</td></tr>
+	<?php endif;?>
 	</tbody>
 </table>
-<div class="list_footer">选中项：<a href="javascript:bakact('del');">删除</a></div>
+<div class="list_footer">
+<a href="javascript:void(0);" id="select_all">全选</a> 选中项：<a href="javascript:bakact('del');">删除</a></div>
 </form>
 <div style="margin:20px 0px 20px 0px;"><a href="javascript:$('#import').hide();displayToggle('backup', 0);">备份数据+</a>　<a href="javascript:$('#backup').hide();displayToggle('import', 0);">导入本地备份文件+</a></div>
 <form action="data.php?action=bakstart" method="post">
@@ -62,12 +65,13 @@
 </div>
 <div class=line></div>
 <div style="margin:0px 0px 20px 0px;">
-	<p class="des">缓存技术可以大幅度加快你博客首页的加载速度。通常系统会自动更新缓存，但也有些特殊情况需要你手动更新，比如缓存文件被无意修改、你手动修改过数据库等。</p>
-	<p style="margin-left:10px;"><input type="button" onclick="window.location='data.php?action=Cache';" value="更新缓存" class="submit" /></p>
+	<p class="des">缓存可以大幅度提高站点的加载速度。通常系统会自动更新缓存，无需手动。有些特殊情况，比如缓存文件被修改、手动修改过数据库、页面出现异常等才需要手动更新。</p>
+	<p><input type="button" onclick="window.location='data.php?action=Cache';" value="更新缓存" class="submit" /></p>
 </div>
 <script>
 setTimeout(hideActived,2600);
 $(document).ready(function(){
+	$("#select_all").toggle(function () {$(".ids").attr("checked", "checked");},function () {$(".ids").removeAttr("checked");});
 	$("#adm_bakdata_list tbody tr:odd").addClass("tralt_b");
 	$("#adm_bakdata_list tbody tr")
 		.mouseover(function(){$(this).addClass("trover")})

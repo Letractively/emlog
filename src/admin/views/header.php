@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=8" />
 <link href="./views/style/<?php echo Option::get('admin_style');?>/style.css" type=text/css rel=stylesheet>
 <link href="./views/css/css-main.css" type=text/css rel=stylesheet>
-<script type="text/javascript" src="../include/lib/js/jquery/jquery-1.2.6.js"></script>
+<script type="text/javascript" src="../include/lib/js/jquery/jquery-1.7.1.js"></script>
 <script type="text/javascript" src="../include/lib/js/jquery/plugin-cookie.js"></script>
 <script type="text/javascript" src="./views/js/common.js"></script>
 <?php doAction('adm_head');?>
@@ -23,24 +23,28 @@
     <td width="9" id="headerleft"></td>
     <td width="125"  class="logo" align="left"><a href="./" title="返回管理首页">emlog</a></td>
     <td class="vesion" width="20"><?php echo Option::EMLOG_VERSION; ?></td>
-    <td  class="home" align="left"><a href="../" target="_blank" title="在新窗口浏览我的blog">
+    <td  class="home" align="left"><a href="../" target="_blank" title="在新窗口浏站点">
     <?php 
     	$blog_name = Option::get('blogname');
     	if (empty($blog_name)) {
-    		$blog_name = '查看博客';
+    		$blog_name = '查看站点';
     	}
-    	echo $blog_name;
+    	echo subString($blog_name, 0, 60);
     ?>
     </a></td>
     <td align=right nowrap class="headtext">
     <?php if (ROLE == 'admin'):?>
+	你好，<a href="./blogger.php"><?php echo $user_cache[UID]['name'] ?>
+	<img src="<?php echo empty($user_cache[UID]['avatar']) ? './views/images/avatar.jpg' : '../' . $user_cache[UID]['avatar'] ?>" 
+	align="top" height="20" width="20" style="border:1px #FFFFFF solid;" />
+	</a>&nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="configure.php"><img src="./views/images/setting.gif" align="absmiddle" border="0"> 设置</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 	<a href="template.php" ><img src="./views/images/skin.gif" align="absmiddle" border="0"> 换模板</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 	<?php else:?>
 	<a href="blogger.php"><img src="./views/images/setting.gif" align="absmiddle" border="0"> 设置</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 	<?php endif;?>
-	<a href="./">管理首页</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-	<a href="./?action=logout">退出</a>&nbsp;&nbsp;&nbsp;&nbsp;	</td>
+	<a href="./?action=logout">退出</a>
+	</td>
     <td width="9" id="headerright" ></td>
 	</tbody>
 </table>
@@ -93,12 +97,12 @@
         <tr>
           <td valign=top align=left width=114>
             <div id=sidebar>
-            <div class="sidebarmenu" onclick="displayToggle('blog_mg', 1);">博客管理</div>
+            <div class="sidebarmenu" onclick="displayToggle('blog_mg', 1);">站点管理</div>
 			<div id="blog_mg">
             <div class="sidebarsubmenu" id="menu_widget"><a href="widgets.php" >Widgets</a></div>
 			<div class="sidebarsubmenu" id="menu_page"><a href="page.php" >页面</a></div>
 			<div class="sidebarsubmenu" id="menu_link"><a href="link.php">链接</a></div>
-			<div class="sidebarsubmenu" id="menu_user"><a href="user.php" >作者</a></div>
+			<div class="sidebarsubmenu" id="menu_user"><a href="user.php" >用户</a></div>
 			<div class="sidebarsubmenu" id="menu_data"><a href="data.php">数据</a></div>
 			</div>
 			</div>

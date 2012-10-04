@@ -3,7 +3,6 @@
  * 数据库操作类
  *
  * @copyright (c) Emlog All Rights Reserved
- * $Id$
  */
 
 /**

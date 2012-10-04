@@ -5,21 +5,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>upload</title>
 <link href="./views/css/css-att.css" type="text/css" rel="stylesheet">
-<script type="text/javascript" src="./views/js/common.js"></script>
 <script>
-function uploadfile()
-{
+function uploadfile(){
 	var as_logid = parent.document.getElementById('as_logid').value
 	document.upload.action = "attachment.php?action=upload&logid="+as_logid;
 	document.upload.submit();
 }
-function showupload()
-{
+function showupload(multi){
 	var as_logid = parent.document.getElementById('as_logid').value
-	window.location.href="attachment.php?action=selectFile&logid="+as_logid;	
+	window.location.href="attachment.php?action=selectFile&logid="+as_logid+"&multi="+multi;	
 }
-function showattlib()
-{
+function showattlib(){
 	var as_logid = parent.document.getElementById('as_logid').value
 	window.location.href="attachment.php?action=attlib&logid="+as_logid;	
 }
@@ -33,10 +29,10 @@ function removeattachfrom() {
 </script>
 <body>
 <div id="media-upload-header">
-	<span id="curtab"><a href="javascript:showupload();">上传附件</a></span>
+	<span id="curtab"><a href="javascript:showupload(0);">上传附件</a></span>
+	<span><a href="javascript:showupload(1);">批量上传</a></span>
 	<span><a href="javascript:showattlib();">附件库（<?php echo $attachnum; ?>）</a></span>
 </div>
-
 <form enctype="multipart/form-data" method="post" name="upload" action="">
 <div id="media-upload-body">
 	<p>(单个附件最大：<?php echo $maxsize ;?>，允许类型：<?php echo $att_type_str; ?>)

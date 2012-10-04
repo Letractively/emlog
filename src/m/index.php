@@ -3,7 +3,6 @@
  * mobile 版本
  *
  * @copyright (c) Emlog All Rights Reserved
- * $Id$
  */
 
 require_once '../init.php';

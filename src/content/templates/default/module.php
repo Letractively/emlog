@@ -140,8 +140,7 @@ function widget_search($title){ ?>
 	<h3><span><?php echo $title; ?></span></h3>
 	<ul id="logserch">
 	<form name="keyform" method="get" action="<?php echo BLOG_URL; ?>index.php">
-	<input name="keyword"  type="text" value="" style="width:120px;"/>
-	<input type="submit" id="logserch_logserch" value="搜索" />
+	<input name="keyword" class="search" type="text" />
 	</form>
 	</ul>
 	</li>
@@ -282,7 +281,7 @@ function blog_trackback($tb, $tb_url, $allow_tb){
 	<?php endforeach; ?>
 <?php }?>
 <?php
-//blog：博客评论列表
+//blog：评论列表
 function blog_comments($comments){
     extract($comments);
     if($commentStacks): ?>
@@ -311,7 +310,7 @@ function blog_comments($comments){
     </div>
 <?php }?>
 <?php
-//blog：博客子评论列表
+//blog：子评论列表
 function blog_comments_children($comments, $children){
 	$isGravatar = Option::get('isgravatar');
 	foreach($children as $child):

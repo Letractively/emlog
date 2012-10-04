@@ -3,7 +3,6 @@
  * 碎语twitter
  *
  * @copyright (c) Emlog All Rights Reserved
- * $Id$
  */
 
 class Twitter_Model {

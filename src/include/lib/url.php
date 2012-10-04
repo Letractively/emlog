@@ -2,7 +2,6 @@
 /**
  * URL处理
  * @copyright (c) Emlog All Rights Reserved
- * $Id$
  */
 
 class Url

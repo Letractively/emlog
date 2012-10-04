@@ -2,11 +2,10 @@
 /**
  * 安装程序
  * @copyright (c) Emlog All Rights Reserved
- * $Id$
  */
 
 define('EMLOG_ROOT', dirname(__FILE__));
-define('DEL_INSTALLER', 0);
+define('DEL_INSTALLER', 1);
 
 require_once EMLOG_ROOT.'/include/lib/function.base.php';
 
@@ -29,7 +28,7 @@ if(!$act){
 <style type="text/css">
 <!--
 body {background-color:#F7F7F7;font-family: Arial;font-size: 12px;line-height:150%;}
-.main {background-color:#FFFFFF;font-size: 12px;color: #666666;width:750px;margin:30px auto;padding:10px;list-style:none;border:#DFDFDF 1px solid; border-radius: 11px;}
+.main {background-color:#FFFFFF;font-size: 12px;color: #666666;width:750px;margin:30px auto;padding:10px;list-style:none;border:#DFDFDF 1px solid; border-radius: 4px;}
 .logo{background:url(admin/views/images/logo.gif) no-repeat center;padding:30px 0px 30px 0px;margin:30px 0px;}
 .title{text-align:center;}
 .title span{font-size:24px; color:#666666;}
@@ -72,18 +71,18 @@ body {background-color:#F7F7F7;font-family: Arial;font-size: 12px;line-height:15
 </li>
 </div>
 <div class="c">
-<p class="title2">博主设置</p>
+<p class="title2">管理员设置</p>
 <li>
-博主登录名：<br />
+登录名：<br />
 <input name="admin" type="text" class="input">
 </li>
 <li>
-博主登录密码：<br />
+登录密码：<br />
 <input name="adminpw" type="password" class="input">
 <span class="care">(不小于6位)</span>
 </li>
 <li>
-再次输入博主登录密码：<br />
+再次输入登录密码：<br />
 <input name="adminpw2" type="password" class="input">
 </li>
 </div>
@@ -116,9 +115,9 @@ if($act == 'install' || $act == 'reinstall')
 	}elseif(!preg_match("/^[\w_]+_$/",$db_prefix)){
 		emMsg('数据库前缀格式错误!');
 	}elseif($admin == '' || $adminpw == ''){
-		emMsg('博主登录名和密码不能为空!');
+		emMsg('登录名和密码不能为空!');
 	}elseif(strlen($adminpw) < 6){
-		emMsg('博主登录密码不得小于6位');
+		emMsg('登录密码不得小于6位');
 	}elseif($adminpw!=$adminpw2)	 {
 		emMsg('两次输入的密码不一致');
 	}
@@ -159,7 +158,7 @@ body {background-color:#F7F7F7;font-family: Arial;font-size: 12px;line-height:15
 	<input name="adminpw" type="hidden" class="input" value="$adminpw">
 	<input name="adminpw2" type="hidden" class="input" value="$adminpw2">
 <p>
-你的emlog看起来已经安装过了。继续安装将会丢失原有的日志数据，你真的要继续吗？
+你的emlog看起来已经安装过了。继续安装将会覆盖老的日志数据，你确定要继续吗？
 <input type="submit" value="继续&raquo;">
 </p>
 <p><a href="javascript:history.back(-1);">&laquo;点击返回</a></p>
@@ -308,6 +307,7 @@ INSERT INTO {$db_prefix}options (option_name, option_value) VALUES ('admin_style
 INSERT INTO {$db_prefix}options (option_name, option_value) VALUES ('tpl_sidenum','1');
 INSERT INTO {$db_prefix}options (option_name, option_value) VALUES ('comment_code','n');
 INSERT INTO {$db_prefix}options (option_name, option_value) VALUES ('isgravatar','y');
+INSERT INTO {$db_prefix}options (option_name, option_value) VALUES ('isthumbnail','y');
 INSERT INTO {$db_prefix}options (option_name, option_value) VALUES ('comment_paging','n');
 INSERT INTO {$db_prefix}options (option_name, option_value) VALUES ('comment_pnum','20');
 INSERT INTO {$db_prefix}options (option_name, option_value) VALUES ('comment_order','newer');
@@ -432,7 +432,7 @@ INSERT INTO {$db_prefix}user (uid, username, password, role) VALUES (1,'$admin',
 	}
 	//重建缓存
 	$CACHE->updateCache();
-	$result .= "博主: {$admin} 添加成功<br />恭喜你！emlog 安装成功<br />";
+	$result .= "管理员: {$admin} 添加成功<br />恭喜你！emlog 安装成功<br />";
 	if (DEL_INSTALLER === 1 && !@unlink('./install.php') || DEL_INSTALLER === 0) {
 	    $result .= '<span style="color:red;"><b>请删除根目录下安装文件(install.php)</b></span> ';
 	}

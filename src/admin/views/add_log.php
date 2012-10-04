@@ -13,10 +13,12 @@
         </tr>
         <tr>
           <td>
-          <a href="javascript: displayToggle('FrameUpload', 0);autosave(1);" class="thickbox">附件管理</a><span id="asmsg">
+          <a href="javascript: displayToggle('FrameUpload', 0);autosave(1);" class="thickbox">附件管理+</a><span id="asmsg">
           <?php doAction('adm_writelog_head'); ?>
           <input type="hidden" name="as_logid" id="as_logid" value="-1"></span><br />
-          <div id="FrameUpload" style="display: none;"><iframe width="720" height="160" frameborder="0" src="attachment.php?action=selectFile"></iframe></div>
+          <div id="FrameUpload" style="display: none;">
+		  	<iframe width="720" height="290" frameborder="0" src="attachment.php?action=selectFile"></iframe>
+		  </div>
 		  <textarea id="content" name="content" cols="100" rows="8" style="width:719px; height:460px;"></textarea>
           <script>loadEditor('content');</script>
           </td>
@@ -24,7 +26,7 @@
         <tr nowrap="nowrap">
           <td>
 		  <div style="margin:10px 0px 5px 0px;">
-		  <label for="tag" id="tag_label">日志标签，半角逗号分隔</label>
+		  <label for="tag" id="tag_label">日志标签，逗号或空格分隔</label>
           <input name="tag" id="tag" maxlength="200" style="width:432px;" />
 
           <select name="sort" id="sort" style="width:130px;">

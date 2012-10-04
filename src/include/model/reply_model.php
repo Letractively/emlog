@@ -2,7 +2,6 @@
 /**
  * 碎语回复管理
  * @copyright (c) Emlog All Rights Reserved
- * $Id$
  */
 
 class Reply_Model {

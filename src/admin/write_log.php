@@ -2,7 +2,6 @@
 /**
  * 显示撰写、编辑日志界面
  * @copyright (c) Emlog All Rights Reserved
- * $Id$
  */
 
 require_once 'globals.php';

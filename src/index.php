@@ -2,7 +2,6 @@
 /**
  * 前端页面加载
  * @copyright (c) Emlog All Rights Reserved
- * $Id$
  */
 
 require_once 'init.php';

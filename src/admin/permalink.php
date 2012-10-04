@@ -2,7 +2,6 @@
 /**
  * 固定连接
  * @copyright (c) Emlog All Rights Reserved
- * $Id$
  */
 
 require_once 'globals.php';

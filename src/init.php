@@ -2,10 +2,9 @@
 /**
  * 全局项加载
  * @copyright (c) Emlog All Rights Reserved
- * $Id$
  */
 
-error_reporting(E_ALL);
+error_reporting(7);
 ob_start();
 header('Content-Type: text/html; charset=UTF-8');
 
@@ -26,7 +25,7 @@ define('ISLOGIN',	isLogin());
 define('ROLE', ISLOGIN === true ? $userData['role'] : 'visitor');
 //用户ID
 define('UID', ISLOGIN === true ? $userData['uid'] : '');
-//博客固定地址
+//站点固定地址
 define('BLOG_URL', Option::get('blogurl'));
 //模板库地址
 define('TPLS_URL', BLOG_URL.'content/templates/');

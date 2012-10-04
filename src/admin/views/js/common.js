@@ -1,10 +1,3 @@
-function CheckAll(form) {
-	for (var i=0;i<form.elements.length;i++) {
-		var e = form.elements[i];
-		if (e.name != 'chkall')
-		e.checked = form.chkall.checked;
-	}
-}
 function getChecked(node) {
 	var re = false;
 	$('input.'+node).each(function(i){
@@ -228,11 +221,11 @@ function autosave(act){
     		var mins = digital.getMinutes();
     		var secs = digital.getSeconds();
     		$("#msg_2").html("<span class=\"ajax_remind_1\">成功保存于 "+hours+":"+mins+":"+secs+" </span>");
-    		$("#savedf").attr("disabled", "");
+    		$("#savedf").attr("disabled", false);
     		$("#savedf").val(btname);
     		$("#msg").html("");
 		}else{
-		    $("#savedf").attr("disabled", "");
+		    $("#savedf").attr("disabled", false);
 		    $("#savedf").val(btname);
 		    $("#msg").html("<span class=\"msg_autosave_error\">网络或系统出现异常...保存可能失败</span>");
 	    }

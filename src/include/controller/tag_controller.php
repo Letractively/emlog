@@ -3,7 +3,6 @@
  * 查看标签日志
  *
  * @copyright (c) Emlog All Rights Reserved
- * $Id$
  */
 
 class Tag_Controller {

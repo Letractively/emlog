@@ -2,7 +2,6 @@
 /**
  * 日历
  * @copyright (c) Emlog All Rights Reserved
- * $Id$
  */
 
 class Calendar {

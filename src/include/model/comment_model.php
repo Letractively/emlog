@@ -2,7 +2,6 @@
 /**
  * 评论管理
  * @copyright (c) Emlog All Rights Reserved
- * $Id$
  */
 
 class Comment_Model {

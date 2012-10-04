@@ -2,7 +2,6 @@
 /**
  * 引用通告管理
  * @copyright (c) Emlog All Rights Reserved
- * $Id$
  */
 
 
