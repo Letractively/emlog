@@ -120,7 +120,7 @@ $tid = (int)$val['id'];
 {{{
 $img = empty($val['img']) ? "" : '<a title="查看图片" href="'.BLOG_URL.str_replace('thum-', '', $val['img']).'" target="_blank"><img style="border: 1px solid #EFEFEF;" src="'.BLOG_URL.$val['img'].'"/></a>';
 }}}
-25行：
+这行
 {{{
 <p class="post1"><span><?php echo $author; ?></span><br /><?php echo $val['t'];?></p>
 }}}
