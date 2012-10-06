@@ -1,15 +1,7 @@
 #summary 模板升级参考（4.2.1到5.0.0）
 #labels Featured
 
-=1、echo_log.php=
-去掉了附件显示相关代码
-
-以默认模板为例：需要删除掉14行：
-{{{
-<p class="att"><?php blog_att($logid); ?></p>
-}}}
-
-=2、header.php=
+=1、header.php=
 
 为实现浏览器标题的设置需要：
 
@@ -52,15 +44,7 @@
 <div id="nav"><?php blog_navi();?></div>
 }}}
 
-=3、log_list.php=
-去掉查看日志页面附件显示相关代码
-
-以默认模板为例：需要删除掉17行：
-{{{
-<p class="att"><?php blog_att($value['logid']); ?></p>
-}}}
-
-=4、module.php=
+=2、module.php=
 侧边栏碎语增加有图片提示
 
 如模板模板79行
@@ -125,7 +109,7 @@ function blog_navi(){
 <?php }?>
 }}}
 
-=5、t.php=
+=3、t.php=
 增加碎语显示图片：
 以默认模板为例：
 在20行下面增加：
@@ -141,9 +125,25 @@ $img = empty($val['img']) ? "" : '<a title="查看图片" href="'.BLOG_URL.str_r
 <p class="post1"><span><?php echo $author; ?></span><br /><?php echo $val['t'].'<br/>'.$img;?></p>
 }}}
 
-=6、page.php=
+=4、page.php=
 
 里面删除了下面一句，去掉附件的直接显示：
+{{{
+<p class="att"><?php blog_att($logid); ?></p>
+}}}
+
+=5、log_list.php=
+去掉查看日志页面附件显示相关代码
+
+以默认模板为例：需要删除掉17行：
+{{{
+<p class="att"><?php blog_att($value['logid']); ?></p>
+}}}
+
+=6、echo_log.php=
+去掉了附件显示相关代码
+
+以默认模板为例：需要删除掉14行：
 {{{
 <p class="att"><?php blog_att($logid); ?></p>
 }}}
