@@ -112,7 +112,11 @@ function blog_navi(){
 =3、t.php=
 增加碎语显示图片：
 以默认模板为例：
-在20行下面增加：
+在
+{{{
+$tid = (int)$val['id'];
+}}}
+这行下面增加：
 {{{
 $img = empty($val['img']) ? "" : '<a title="查看图片" href="'.BLOG_URL.str_replace('thum-', '', $val['img']).'" target="_blank"><img style="border: 1px solid #EFEFEF;" src="'.BLOG_URL.$val['img'].'"/></a>';
 }}}
