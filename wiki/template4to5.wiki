@@ -141,15 +141,6 @@ $img = empty($val['img']) ? "" : '<a title="查看图片" href="'.BLOG_URL.str_r
 <p class="post1"><span><?php echo $author; ?></span><br /><?php echo $val['t'].'<br/>'.$img;?></p>
 }}}
 
-32行下面增加：
-{{{
-<?php if ($istreply == 'y'):?>
-}}}
-44行下面增加：
-{{{
-<?php endif;?>
-}}}
-
 =6、page.php=
 
 里面删除了下面一句，去掉附件的直接显示：
