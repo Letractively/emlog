@@ -1,0 +1,31 @@
+#summary One-sentence summary of this page.
+
+= emlog文档 =
+
+
+== 项目相关信息 ==
+
+  * [http://domain/page 常见问题]
+  * [http://domain/page 项目成员]
+  * [http://domain/page 开发历史]
+  * [http://bbs.emlog.net 讨论组]
+
+== 安装和升级 ==
+
+  * [http://domain/page 如何安装]
+  * [http://domain/page 如何升级]
+
+== 如何使用 ==
+
+  * [http://domain/page 常见问题]
+
+== 扩展开发 ==
+
+  * [http://domain/page 模板开发]
+  * [http://domain/page 插件开发]
+
+== 帮助emlog ==
+
+  * [http://domain/page 加入文档维护]
+  * [http://domain/page 加入论坛管理]
+  * [http://domain/page 加入开发者]
