@@ -6,23 +6,23 @@
 
 == 项目相关信息 ==
 
-  * [http://domain/page 项目成员]
-  * [coding_criterion 开发历史]
+  * [member 项目成员]
+  * [verlog 开发历史]
   * [http://bbs.emlog.net 讨论组]
 
 == 安装和升级 ==
 
-  * [http://domain/page 如何安装]
-  * [http://domain/page 如何升级]
+  * [install 如何安装]
+  * [update 如何升级]
 
 == 如何使用 ==
 
-  * [http://domain/page 常见问题]
+  * [faq 常见问题]
 
 == 扩展开发 ==
 
-  * [http://domain/page 模板开发]
-  * [http://domain/page 插件开发]
+  * [dev_template 模板开发]
+  * [dev_plugin 插件开发]
 
 == 帮助emlog ==
 
