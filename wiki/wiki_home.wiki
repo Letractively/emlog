@@ -6,9 +6,8 @@
 
 == 项目相关信息 ==
 
-  * [http://domain/page 常见问题]
   * [http://domain/page 项目成员]
-  * [http://domain/page 开发历史]
+  * [coding_criterion 开发历史]
   * [http://bbs.emlog.net 讨论组]
 
 == 安装和升级 ==
