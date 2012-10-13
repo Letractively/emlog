@@ -18,14 +18,9 @@
 == 如何使用 ==
 
   * [faq 常见问题]
+  * [fun 功能说明]
 
 == 扩展开发 ==
 
   * [dev_template 模板开发]
   * [dev_plugin 插件开发]
-
-== 帮助emlog ==
-
-  * [http://domain/page 加入文档维护]
-  * [http://domain/page 加入论坛管理]
-  * [http://domain/page 加入开发者]
