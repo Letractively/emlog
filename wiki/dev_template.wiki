@@ -1,3 +1,4 @@
 #summary 模板开发指南（适用于emlog5.0）
+#labels emlog模板的构成
 
 = 模板开发指南（适用于emlog5.0） =
