@@ -3,24 +3,26 @@
 
 = emlog文档 =
 
+emlog 是 every memory log 的简称，意即：点滴记忆。是一款基于PHP和MySQL的功能强大的博客及CMS建站系统。致力于为您提供快速、稳定，且在使用上又极其简单、舒适的内容创作及站点搭建服务。
+
 
 == 项目相关信息 ==
 
   * [member 项目成员]
   * [verlog 开发历史]
-  * [http://bbs.emlog.net 讨论组]
 
 == 安装和升级 ==
 
-  * [install 如何安装]
-  * [update 如何升级]
+  * [install 如何安装？]
+  * [update 如何升级？]
 
 == 如何使用 ==
 
   * [faq 常见问题]
   * [fun 功能说明]
+  * [fun_url_static 伪静态设置]
 
 == 扩展开发 ==
 
-  * [dev_template 模板开发]
-  * [dev_plugin 插件开发]
+  * [dev_template 模板开发指南]
+  * [dev_plugin 插件开发指南]
