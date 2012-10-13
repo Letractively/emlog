@@ -68,8 +68,7 @@
 </code>
 视屏的地址为代码中标记为红色加粗的部分,找到后可以用编辑器的插入flash功能插入视频
 
-=== 为什么我修改了博客代码文件后出现类似以下的错误？=== 
-Warning:Cannot modify header information - headers already sent by ……?
+=== 为什么我修改了博客代码文件后出现类似以下的错误？Warning:Cannot modify header information - headers already sent by ……? === 
 这是由于您的编辑器在PHP文件中写入了BOM头所致，请使用Editplus、Notepad++、Dreamweaver等不会自己写入BOM头软件修改emlog的源代码。如果您出现这个问题，请在软件中设定自动移除BOM头后再次编辑并保存出现问题的文件即可。
 注释：Editplus 的设定方法：工具 - 参数选择 - 文件 - UTF-8签名 设定为 “总是删除签名” 
 
