@@ -1,4 +1,5 @@
 #summary 插件扩展开发指南（适用于emlog5.0）
+#sidebar doc_list
 
 =  插件开发指南（适用于emlog5.0） =
 
