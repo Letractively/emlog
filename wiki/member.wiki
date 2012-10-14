@@ -1,4 +1,5 @@
 #summary 项目介绍
+#sidebar doc_list
 
 = 简洁而不简单的EMLOG =
 
