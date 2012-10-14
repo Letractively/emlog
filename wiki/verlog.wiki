@@ -226,21 +226,6 @@
  * 增加Google Picasa相册插件
  * 优化模板结构
 
-数据库变更
-{{{
-ALTER TABLE {$db_prefix}blog ADD author INT( 10 ) NOT NULL DEFAULT '1' AFTER excerpt;
-ALTER TABLE {$db_prefix}blog ADD type VARCHAR( 20 ) NOT NULL DEFAULT 'blog' AFTER sortid;
-INSERT INTO {$db_prefix}options (option_name, option_value) VALUES ('viewcount_day','$day_view_count');
-INSERT INTO {$db_prefix}options (option_name, option_value) VALUES ('viewcount_all','$view_count');
-INSERT INTO {$db_prefix}options (option_name, option_value) VALUES ('viewcount_date','$curdate');
-INSERT INTO {$db_prefix}options (option_name, option_value) VALUES ('active_plugins','a:1:{i:0;s:13:\"tips/tips.php\";}');
-INSERT INTO {$db_prefix}options (option_name, option_value) VALUES ('navibar','a:0:{}');
-DROP TABLE IF EXISTS {$db_prefix}statistics;
-ALTER TABLE {$db_prefix}user ADD role VARCHAR( 60 ) NOT NULL AFTER nickname;
-ALTER TABLE {$db_prefix}user CHANGE description description VARCHAR( 255 ) NOT NULL;
-UPDATE {$db_prefix}user SET role = 'admin' WHERE uid =1 LIMIT 1;
-}}}
-
 ==emlog 3.1.0==
 发布时间：2009/3/7
 
@@ -252,33 +237,6 @@ UPDATE {$db_prefix}user SET role = 'admin' WHERE uid =1 LIMIT 1;
  * 去掉doc目录下的文本说明，改用更加优雅的readme.html
  * 安装后自动填写博客地址，无需后台设置
  ……
-
-
-数据库变更
-{{{
-ALTER TABLE em_blog ADD excerpt LONGTEXT NOT NULL AFTER content ;
-ALTER TABLE em_blog CHANGE content content LONGTEXT NOT NULL ; 
-ALTER TABLE em_blog ADD password VARCHAR( 255 ) NOT NULL default '' ; 
-ALTER TABLE `emlog_tag DROP usenum;
- 
-DELETE FROM em_options WHERE option_name ='custom_content1' LIMIT 1 ;
-DELETE FROM em_options WHERE option_name ='custom_content2' LIMIT 1 ;
-DELETE FROM em_options WHERE option_name ='custom_content3' LIMIT 1 ;
-DELETE FROM em_options WHERE option_name ='custom_content4' LIMIT 1 ;
-DELETE FROM em_options WHERE option_name ='custom_title1' LIMIT 1 ;
-DELETE FROM em_options WHERE option_name ='custom_title2' LIMIT 1 ;
-DELETE FROM em_options WHERE option_name ='custom_title3' LIMIT 1 ;
-DELETE FROM em_options WHERE option_name ='custom_title4' LIMIT 1 ;
- 
-INSERT INTO em_options (option_name, option_value) VALUES ('custom_widget','a:0:{}');
- 
-UPDATE em_options
-SET option_value = 'a:8:
-
-{i:0;s:7:"blogger";i:1;s:8:"calendar";i:2;s:3:"tag";i:3;s:7:"archive";i:4;s:7:"newcomm";i:5;s:4:"link";i:6;s:6:"search";i:7
-
-;s:8:"bloginfo";}' WHERE option_name ='widgets1' LIMIT 1 ; 
-}}}
 
 
 ==emlog 3.0.1==
@@ -315,33 +273,6 @@ BUG修复
 2.IE6不支持中文标签超链接
 }}}
 
-数据库变更
-{{{
-ALTER TABLE emlog_user CHANGE password password VARCHAR( 64 ) NOT NULL;
-ALTER TABLE emlog_blog DROP attcache;
-ALTER TABLE emlog_blog CHANGE date date BIGINT( 20 ) NOT NULL;
-ALTER TABLE emlog_attachment CHANGE addtime addtime BIGINT( 20 ) NOT NULL;
-ALTER TABLE emlog_comment CHANGE date date BIGINT( 20 ) NOT NULL;
-ALTER TABLE emlog_trackback CHANGE date date BIGINT( 20 ) NOT NULL;
-ALTER TABLE emlog_twitter CHANGE date date BIGINT( 20 ) NOT NULL;
-ALTER TABLE emlog_blog ADD sortid TINYINT( 3 ) NOT NULL DEFAULT '-1' AFTER content;
-ALTER TABLE emlog_blog ADD attnum MEDIUMINT( 8 ) UNSIGNED NOT NULL DEFAULT '0' AFTER tbcount;emlog_tbcountemlog_
-CREATE TABLE IF NOT EXISTS emlog_sort (
-  emlog_sidemlog_ tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
-  emlog_sortnameemlog_ varchar(255) NOT NULL DEFAULT '',
-  emlog_taxisemlog_ tinyint(3) NOT NULL DEFAULT '0',
-  PRIMARY KEY (emlog_sidemlog_)
-)
-
-DROP TABLE emlog_configemlog_ 
-
-CREATE TABLE IF NOT EXISTS emlog_options (
-  emlog_option_idemlog_ int(11) unsigned NOT NULL AUTO_INCREMENT,
-  emlog_option_nameemlog_ varchar(255) NOT NULL,
-  emlog_option_valueemlog_ longtext NOT NULL,
-  PRIMARY KEY (emlog_option_idemlog_)
-)
-}}}
 
 ==emlog 2.7.0==
 发布时间：2008/8/3 
@@ -365,18 +296,6 @@ BUG修复
  * 修复后台草稿管理多于1页后的bug
 
 
-==数据库变更记录==
-
- * 增加Gzip开关设定选项
-
-   ALTER TABLE `em_config` ADD `isgzipenable` ENUM( 'n', 'y' ) NOT NULL DEFAULT 'n' AFTER `isurlrewrite` ;
-
-   ALTER TABLE `em_user` CHANGE `description` `description` TEXT NOT NULL
-
-   ALTER TABLE `em_config` DROP `index_tagnum` 
-
-   ALTER TABLE `em_attachment` DROP `attdes` 
-
 ==emlog2.6.5==
 发布时间：2008/5/3 
 ====新增特性：====
@@ -390,20 +309,6 @@ BUG修复
  * 登录方式的改进，前台也可以进行简单的管理操作
  * 验证码好看了点，字母数字混合 
  * 附件上传，用户体验有所改善 
-
-====数据库变更记录====
-{{{
- CREATE TABLE em_twitter (
- id INT NOT NULL AUTO_INCREMENT ,
- content VARCHAR(255) NOT NULL ,
- date VARCHAR(10) NOT NULL ,
- PRIMARY KEY (id)
- );
-
-ALTER TABLE `em_config` ADD `index_twnum` TINYINT( 3 ) UNSIGNED DEFAULT '0' NOT NULL AFTER `index_tagnum` ;
-}}}
-
-
 
 ==emlog2.6.0==
 发布时间：2008/3/8 
@@ -424,14 +329,7 @@ ALTER TABLE `em_config` ADD `index_twnum` TINYINT( 3 ) UNSIGNED DEFAULT '0' NOT 
  * 优化日志管理页面，可以直接查找该日志对应的评论进行管理
 BUG修复
  * 图片附件添加到编辑器时，带有蓝色边框 
-数据库变更记录
-2.5.0 －－－>2.6
- * ALTER TABLE em_config ADD isurlrewrite enum('n','y') NOT NULL default 'n' AFTER iscomment; 系统设置增加URL重写选项 
- * ALTER TABLE em_comment ADD url VARCHAR( 75 ) NOT NULL AFTER mail ; 网友评论增加主页选项 
- * ALTER TABLE em_config CHANGE iscomment ischkcomment ENUM( 'n', 'y' ) NULL DEFAULT 'n' 重命名是否开启评论审核的字段 
- * ALTER TABLE em_config ADD istrackback ENUM( 'n', 'y' ) DEFAULT 'y' NOT NULL AFTER iscomment; 增加是否开启引用通告字段 
- * ALTER TABLE em_trackback ADD ip VARCHAR( 16 ) NOT NULL ; 引用通告增加一个ip字段 
- * ALTER TABLE em_comment ADD reply TEXT NOT NULL AFTER comment ; 增加管理员回复评论字段 		
+
 ==emlog2.5.0==
 
 发布时间：2007/11/24 
