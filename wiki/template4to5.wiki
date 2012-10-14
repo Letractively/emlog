@@ -1,5 +1,6 @@
 #summary 模板升级参考（4.2.1到5.0.0）
 #labels Featured
+#sidebar doc_list
 
 =1、header.php=
 
