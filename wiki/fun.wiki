@@ -1,3 +1,4 @@
 #summary 功能使用说明
+#sidebar doc_list
 
 = 功能使用说明 =
