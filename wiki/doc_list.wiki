@@ -1,7 +1,7 @@
 #summary 文档边栏目录
 
   === 项目信息 ===
-    * [member 项目简介]
+    * [index 项目简介]
     * [verlog 开发历史]
   === 安装和升级 ===
     * [install 安装说明]
