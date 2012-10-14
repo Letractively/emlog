@@ -1,4 +1,5 @@
 #summary emlog常见问题
+#sidebar doc_list
 
 == emlog常见问题 ==
 
