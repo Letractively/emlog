@@ -1,4 +1,5 @@
 #summary emlog 代码编写规范
+#sidebar doc_list
 
 
 = emlog PHP 编码规范 =
