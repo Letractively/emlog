@@ -1,4 +1,5 @@
 #summary 安装说明
+#sidebar doc_list
 
 = 安装所需环境 =
 
