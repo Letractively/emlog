@@ -1,4 +1,5 @@
 #summary 模板开发指南（适用于emlog5.0）
+#sidebar doc_list
 
 = 模板开发指南（适用于emlog5.0） =
 
