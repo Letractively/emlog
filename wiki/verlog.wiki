@@ -1,4 +1,5 @@
 #summary emlog历史发布版本记录
+#sidebar doc_list
 
 
 
