@@ -1,5 +1,7 @@
-#summary EMLOG文档
 #labels Featured
+#sidebar doc_list
+
+#summary EMLOG文档
 
 = emlog文档 =
 
