@@ -37,7 +37,7 @@ emlog对引用通告功能有很好的支持，并且有强大的反垃圾策略
 再将emlog下载包里面ext 目录下的 .htaccess 文件上传到博客根目录，然后检查页面上日志的链接是否都能正常访问。
 如果不正常，请关闭URL伪静态功能，并删除.htaccess 文件。
 
-== 如果是iis服务器：== 
+如果是iis服务器：
 
 请参考：http://www.emlog.net/bbs/thread-472-1-1.html
 
