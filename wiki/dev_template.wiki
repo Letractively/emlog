@@ -208,6 +208,12 @@ $user_cache = $CACHE->readCache('user');
 $DB = MySql::getInstance();
 $res = $DB->query($sql);
 以上两点与3.x不同，请注意区分。
+
+
+== 404.php ==
+
+用于自定义404页面的模板。
+
  
 == 最后附：前台模板部分挂载点一览 ==
 
