@@ -1,7 +1,7 @@
-#summary 模板开发基础指南（适用于emlog5.0）
+#summary 模板开发指南（适用于emlog5.0）
 #sidebar doc_list
 
-= 模板开发指南（适用于emlog5.0） =
+= 模板开发基础指南（适用于emlog5.0） =
 
 本文分析emlog5下的模板基本结构以及基本变量、函数的作用，详细了解本文，有助于更快掌握emlog5的模板开发基础。
 
@@ -30,9 +30,12 @@ emlog的模板位于安装目录content\templates\文件夹下，每个模板都
 == 公共代码分析 ==
 
 通过预览整个模板中的各个文件，你会发现以下代码同时存在于多个文件中，这些代码分别有以下用途：
- * if(!defined('EMLOG_ROOT')) {exit('error!');}   此行代码存在于模板目录下的每个php文件起始部分(事实上为了安全起见，该行代码也在admin目录下的几乎所有php文件起始部分存在)，其作用是防止代码所在的php脚本被直接访问执行。例如，常规情况下，log_list.php是被系统整体调用作为页面的一部分进行内容输出的，但是，你也可以通过http://yourweb.com/content/templates/yourtemplate/logo_list.php访问到。如果不添加此行代码，那么这样访问将会输出类似下面的错误信息：
-{{{Fatal error: Call to undefined function doAction() in E:\workspace\emlogDevelop\content\templates\sandfish\log_list.php on line 2}}}
-该错误信息将会暴露你博客的物理路径，将对你的博客安全产生威胁。而在加上此行代码后，所有非法访问emlog系统都会输出“error!”字样，而不用担心你的博客物理路径的泄露以及其它安全问题。
+ * if(!defined('EMLOG_ROOT')) {exit('error!');}   此行代码存在于模板目录下的每个php文件起始部分(事实上为了安全起见，该行代码也在admin目录下的几乎所有php文件起始部分存在)，其作用是防止代码所在的php脚本被直接访问执行。例如，常规情况下，log_list.php是被系统整体调用作为页面的一部分进行内容输出的，但是，你也可以通过 _http://yourweb.com/content/templates/yourtemplate/logo_list.php_ 访问到。如果不添加此行代码，那么这样访问将会输出类似下面的错误信息：
+    *`Fatal error: Call to undefined function doAction() in E:\workspace\emlogDevelop\content\templates\sandfish\log_list.php on line 2`*
+
+    该错误信息将会暴露你博客的物理路径，将对你的博客安全产生威胁。而在加上此行代码后，所有非法访问emlog系统都会输出“error!”字样，而不用担心你的博客物理路径的泄露以及其它安全问题。
+
+ * require_once View::getView('side');require_once View::getView('footer'); 这两行代码存在于log_list.php、echo_log.php、page.php、t.php里面，其作用是调用模板文件夹下的side.php和footer.php的代码到当前文件的当前位置。View是emlog的模板视图控制器，View::getView('文件名','文件后缀')将返回当前模板安装路径下对应的文件。getView函数的第二个参数为缺省参数，在不传入值的情况下，将默认作为.php文件后缀返回文件路径。
 
 == header.php ==
 
