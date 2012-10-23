@@ -1,7 +1,7 @@
-#summary 如何升级？？
+#summary emlog升级说明
 #sidebar doc_list
 
-= 到底该如何升级呢？ =
+= emlog升级 =
 
 {{{
 1、请根据您当前的emlog版本选择对应的升级包
