@@ -3,12 +3,13 @@
 
 = 到底该如何升级呢？ =
 
-==升级包下载<a name="up"></a></h2>
 {{{
 1、请根据您当前的emlog版本选择对应的升级包
 
 2、升级前请认真阅读包内升级说明，严格按照升级步骤进行升级。
 }}}
+
+= 下载升级包 =
 <div>
 <li><a href="http://www.emlog.net/em_download/emlog/emlog-4.2.1to5.0.0.zip" title="点击下载升级包"><b>4.2.1 到 5.0.0</b> 最新</a></li>
 <li><a href="http://www.emlog.net/em_download/emlog/emlog-4.2.0to4.2.1.zip" title="点击下载升级包">4.2.0 到 4.2.1</a></li>
@@ -30,5 +31,3 @@
 <li><a href="http://www.emlog.net/em_download/emlog/emlog-2.6.0to2.6.5.zip" title="点击下载升级包">2.6.0 到 2.6.5</a></li>
 <li><a href="http://www.emlog.net/em_download/emlog/emlog-2.5.0to2.6.0.zip" title="点击下载升级包">2.5.0 到 2.6.0</a></li>
 </div>
-
-[http://www.emlog.net/download 下载升级包]
