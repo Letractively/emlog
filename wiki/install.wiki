@@ -1,9 +1,9 @@
 #summary 安装说明
 #sidebar doc_list
 
-= 安装所需环境 =
+== 安装环境 ==
 
-  * php和MySQL的要求
+  * PHP和MySQL的要求
      * PHP5.0及以上版本，推荐PHP5.2及以上
      * MySQL4.1及以上版本，推荐使用MySQL5
 
@@ -11,10 +11,11 @@
      * 推荐使用Linux+Apache主机，Apache主机对于emlog的伪静态支持良好配置简单。
 
   * 浏览器：
-     * 推荐使用chrome、Firefox、ie9浏览器，不推荐ie6、ie7。
+     * 推荐使用chrome、Firefox、ie9浏览器
+     * 不推荐使用ie6、ie7
 
 
-= 安装流程 =
+== 安装流程 ==
 
   * 1、将src文件夹下的所有文件上传到服务器或者虚拟主机你要安装emlog的目录，
     * 注意是src下的内容不是把src这个文件夹传上去。
