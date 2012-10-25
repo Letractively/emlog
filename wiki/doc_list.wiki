@@ -15,4 +15,4 @@
     * [dev_template 模板开发指南]
     * [dev_plugin 插件开发指南]
   === 其他文档 ===
-    * [template4to5 模板升级参考（4.2.1到5.0.0）]
+    * [template4to5 5.0模板升级参考]
