@@ -1,11 +1,11 @@
 #summary emlog项目简介
 #sidebar doc_list
 
-= 简洁而不简单的EMLOG =
+== 简洁而不简单的EMLOG ==
 
 emlog 是 every memory log 的简称，意即：点滴记忆。是一款基于PHP和MySQL的功能强大的博客及CMS建站系统。致力于为您提供快速、稳定，且在使用上又极其简单、舒适的内容创作及站点搭建服务。
 
-= emlog文档 =
+== emlog文档 ==
 
 这里是由emlog开发人员及爱好者共同维护的帮助文档，希望这里的内容对你有所帮助
 
@@ -13,7 +13,7 @@ emlog 是 every memory log 的简称，意即：点滴记忆。是一款基于PH
 
    [template4to5 模板升级参考（4.2.1到5.0.0）]
 
-= 开发组成员 =
+== 开发组成员 ==
 
   * 那多记忆 
   * 奇遇
@@ -22,7 +22,7 @@ emlog 是 every memory log 的简称，意即：点滴记忆。是一款基于PH
   * KLLER
   * Godson
 
-= 文档维护 =
+== 文档维护 ==
   * kuma 负责模板开发文档
   * 卡片 负责模板开发文档
   * bstaint 负责常见问题文档
