@@ -22,6 +22,7 @@ emlog的模板位于安装目录content\templates\文件夹下，每个模板都
  * preview.jpg：在后台模板选择界面显示的模板预览图，300X225 jpg格式。
  * side.php：模板侧边栏文件，如制作单栏模板则该文件不是必须的。
  * t.php：显示emlog系统自带的微博（碎语）内容。
+ * 404.php 自定义404页面未找到时的报错页面
 
 在一般的emlog模板开发中，以上提及的部分中echo_log.php、log_list.php、module.php、page.php、t.php、header.php以及preview.jpg是不可或缺的，一旦缺省，模板将无法运行。此外的side.php、footer.php、main.css、images文件夹等，只需要对模板代码做小部分更改，那么它们都是可以改名、移动、甚至删除的。
 
