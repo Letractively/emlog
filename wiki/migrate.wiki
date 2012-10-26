@@ -1,4 +1,5 @@
 #summary emlog迁移教程
+#sidebar doc_list
 
 = emlog搬家教程 =
 
