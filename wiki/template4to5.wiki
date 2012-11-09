@@ -2,6 +2,8 @@
 #labels Featured
 #sidebar doc_list
 
+= 模板升级参考（4.2.1到5.0.0） =
+
 =1、header.php=
 
 为实现浏览器标题的设置需要：
