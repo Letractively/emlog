@@ -71,14 +71,14 @@
 然后把emlog的播放器切换为html代码模式(工具栏左起第一个按钮),将代码复制进去即可.
 如果你想寻找视频的地址,那么需要在代码中自行寻找
 下面是一段典型的youtube播放器的代码例子
-<code language="xml">
+{{{
 <object width="425" height="344">
         <param name="movie" value="http://www.youtube.com/v/weQSLVtSIOU&hl=en&fs=1"></param>
         <param name="allowFullScreen" value="true"></param>
         <param name="allowscriptaccess" value="always"></param>
         <embed src="http://www.youtube.com/v/weQSLVtSIOU&hl=en&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed>
 </object>
-</code>
+}}}
 视屏的地址为代码中标记为红色加粗的部分,找到后可以用编辑器的插入flash功能插入视频
 
 === 为什么我修改了博客代码文件后出现类似以下的错误？Warning:Cannot modify header information - headers already sent by ……? === 
